@@ -1,4 +1,4 @@
-#One Day Web Workshop
+#Day 1: HTML and CSS
 
 Today we will be learning to make websites using HTML and CSS. No previous experience is necessary, just have fun and be creative! We will be making web pages to help us tell a story that we can show our friends and family.
 
@@ -199,7 +199,7 @@ We can get an idea of what's happening by looking at each line of the CSS.
 
 * For all ```<body>``` tags
     1. Use ```Arial``` as the font
-    2. Set the background color to ```#FF6BC4``` (A ***hex color***. More on this later)
+    2. Set the background color to ```green```
 
 
 CSS follows a basic pattern. First, we select the HTML elements we want to
@@ -209,7 +209,7 @@ Take this snippet for example:
 ```css
 body {
   font-family: Arial;
-  background-color: #FF6BC4;
+  background-color: green;
 }
 ```
 
@@ -245,19 +245,6 @@ color: yellow;
 background-color: black;
 ```
 
-###Making Your Own Colors
-
-There is a simple way to do colors in CSS, simply by typing in the color:
-
-```background-color: green;```
-
-But there are many more colors that we don't have names for. As we saw in the earlier example, it used a color #FF6BC4. That is a hex color - it combines red, blue, and green to make a very specific color. It will give you many many more options for colors to use on your web page.
-
-In order to find the hex value for a specific color, go to [Color Picker](http://colorpicker.com/). Select the color you want and copy the hex value from the top of the screen.
-
-![color picker](https://raw.githubusercontent.com/CoderDojoSV/Medallia-Web-Workshop/master/color%20picker2.png)
-
-If you are interested in learning how the computer knows that #FF6BC4 is that specific shade of pink, ask a mentor! It is really cool!
 
 #Putting It All Together!
 
@@ -267,8 +254,3 @@ You have learned the basics for creating web pages! Use your new skills to compl
 
 [Here is the link to my finished code](http://jsbin.com/yedet/2/edit?html,css,output) 
 
-###Make More Web Pages
-
-Great job on your web page today. Don't forget that you can refer back here when you want to create more web pages. You can create them for school projects, as birthday cards for family members, or just for fun!
-
-If you had fun today and would like to keep learning more HTML and CSS, [Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css) has an excellent tutorial. 
