@@ -20,7 +20,7 @@ If you are interested in learning how the computer knows that #FF6BC4 is that sp
 
 
 
-###FUN HTML TAG FROM THE 90s: 
+###FUN HTML TAG FROM THE 90s: marquee
 <marquee> 
 
 ###TALK ABOUT DIV / SPAN TO GROUP THINGS TOGETHER
