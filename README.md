@@ -13,6 +13,6 @@ All websites are a combination of code in 3 languages: HTML, CSS, and Javascript
 
 [:rocket: Day 3][2]: Javascript - Your own quiz website
 
-[0]: Day 1/
-[1]: Day 2/
-[2]: Day 3/
+[0]: Day-1/
+[1]: Day-2/
+[2]: Day-3/
