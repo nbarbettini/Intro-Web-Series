@@ -1,6 +1,6 @@
 #Day 2: More HTML and CSS
 
-Today we will be continuing with more HTML and CSS, giving you more power to make awesome websites!
+Today we will be making a maze website with multiple pages and learning more HTML + CSS to make them look impressive!
 
 
 ###Making Your Own Colors
@@ -19,12 +19,14 @@ If you are interested in learning how the computer knows that #FF6BC4 is that sp
 
 
 
-
 ###FUN HTML TAG FROM THE 90s: marquee
-<marquee> 
+This tag isn't supposed to be used any more, but it still works in most browsers. Try it!
+```html
+<marquee>What does this tag do?</marquee>
+```
 
 ###TALK ABOUT DIV / SPAN TO GROUP THINGS TOGETHER
-
+Have you noticed how some HTML tags will drop down to a new line while others don't?
 
 ###Give things a class or id so that you can select it
 
