@@ -21,12 +21,29 @@ If you are interested in learning how the computer knows that #FF6BC4 is that sp
 
 ###FUN HTML TAG FROM THE 90s: marquee
 This tag isn't supposed to be used any more, but it still works in most browsers. Try it!
+
 ```html
 <marquee>What does this tag do?</marquee>
 ```
 
 ###Grouping things together with div and span
 How can you group a whole bunch of HTML elements together so that you can control them with your CSS or Javascript. 
+
+```html
+<div>
+   <img src="image.jpg">
+   The caption for the image
+</div>   
+```
+
+Try out both of these - what is the difference?
+
+```html
+<span>
+   <img src="image.jpg">
+   The caption for the image
+</span>   
+```
 
 Have you noticed how some HTML tags will drop down to a new line while others don't? That is called a block element or an in-line element. 
 
