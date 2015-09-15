@@ -24,8 +24,12 @@ How can you group a whole bunch of HTML elements together so that you can contro
 ```html
 <div>
    <img src="http://lorempixel.com/150/150/cats/">
-   The caption for the image
-</div>   
+   Cat description 1
+</div>
+<div>
+   <img src="http://lorempixel.com/150/150/cats/">
+   Cat description 2
+</div>
 ```
 
 Try out both of these - what is the difference?
@@ -33,8 +37,12 @@ Try out both of these - what is the difference?
 ```html
 <span>
    <img src="http://lorempixel.com/150/150/cats/">
-   The caption for the image
-</span>   
+   Cat description 1
+</span>
+<span>
+   <img src="http://lorempixel.com/150/150/cats/">
+   Cat description 2
+</span>
 ```
 
 Have you noticed how some HTML tags will drop down to a new line while others don't? That is called a block element or an in-line element. 
