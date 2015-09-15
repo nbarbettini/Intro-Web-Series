@@ -2,7 +2,6 @@
 
 Today we will be making a maze website with multiple pages, but first let's learn more HTML + CSS to make them look impressive!
 
-
 ###Making Your Own Colors
 
 There is a simple way to do colors in CSS, simply by typing in the color:
@@ -64,7 +63,7 @@ Example:
 
 The difference between an ID and a class is that an ID can be used to identify one element, whereas a class can be used to identify more than one.
 
-###What other CSS things do we wnat to do?
+###What other CSS things do we wnat to do? -- NOT DONE YET
 Show border, padding, margin
 Show onhover
 
