@@ -18,14 +18,6 @@ In order to find the hex value for a specific color, go to [Color Picker](http:/
 If you are interested in learning how the computer knows that #FF6BC4 is that specific shade of pink, ask a mentor! It is really cool!
 
 
-
-###FUN HTML TAG FROM THE 90s: marquee
-This tag isn't supposed to be used any more, but it still works in most browsers. Try it!
-
-```html
-<marquee>What does this tag do?</marquee>
-```
-
 ###Grouping things together with div and span
 How can you group a whole bunch of HTML elements together so that you can control them with your CSS or Javascript. 
 
@@ -49,19 +41,31 @@ Have you noticed how some HTML tags will drop down to a new line while others do
 
 ###CSS Select with class or ID
 
-What if you had two paragraphs of text on your page and you only wanted to give one a green background? You can do that by giving your HTML element a class or ID.
+What if you had two paragraphs of text on your page and you only wanted to give one a green background? You can do that by giving your HTML element a class or ID attribute. You can give you class any name you like (one word only, must start with a letter).
 
 Example: 
 ```html
-<p>First paragraph of text</p>
+<p class="intro">First paragraph of text</p>
 <p>Another paragraph of text</p>
 ```
+```css
+.intro {
+   background-color: green;
+}
+```
 
+The difference between an ID and a class is that an ID can be used to identify one element, whereas a class can be used to identify more than one.
 
 ###What other CSS things do we wnat to do?
 Show border, padding, margin
 Show onhover
 
+###FUN HTML TAG FROM THE 90s: marquee
+This tag isn't supposed to be used any more, but it still works in most browsers. Try it!
+
+```html
+<marquee>What does this tag do?</marquee>
+```
 
 ###MAKE A MAZE!
 This will require downloading a text editor, posting on neocities.org
