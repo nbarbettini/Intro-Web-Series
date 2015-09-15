@@ -1,6 +1,6 @@
 #Day 2: Let's Make a Maze!
 
-Today we will be making a maze website with multiple pages and learning more HTML + CSS to make them look impressive!
+Today we will be making a maze website with multiple pages, but first let's learn more HTML + CSS to make them look impressive!
 
 
 ###Making Your Own Colors
@@ -67,9 +67,15 @@ This tag isn't supposed to be used any more, but it still works in most browsers
 <marquee>What does this tag do?</marquee>
 ```
 
-###MAKE A MAZE!
-This will require downloading a text editor, posting on neocities.org
+#Let's Make a Maze!
+Websites usually have many pages that you navigate by clicking on links. We are going to create your first multiple page website, a link maze with only one way to get to the end.
 
-Should we give a starter project / example? 
+Go here and click 'remix': https://d157rqmxrxj6ey.cloudfront.net/bskinny129/7892
 
-Show how to link a CSS file that is shared by all HTML pages on the site
+Notice that all the pages use the same CSS file - this way you can easily control how the whole website looks.
+
+Create your own version! There a lot of different things you can do, so get creative:
+* Instead of escaping zombies, come up with your own idea. You can change the words and images.
+* Change the CSS to improve how all the pages look.
+* Add new HTML files to make the maze longer and more difficult to find the end.
+
