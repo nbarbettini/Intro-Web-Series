@@ -31,7 +31,7 @@ How can you group a whole bunch of HTML elements together so that you can contro
 
 ```html
 <div>
-   <img src="image.jpg">
+   <img src="http://lorempixel.com/150/150/cats/">
    The caption for the image
 </div>   
 ```
@@ -40,14 +40,23 @@ Try out both of these - what is the difference?
 
 ```html
 <span>
-   <img src="image.jpg">
+   <img src="http://lorempixel.com/150/150/cats/">
    The caption for the image
 </span>   
 ```
 
 Have you noticed how some HTML tags will drop down to a new line while others don't? That is called a block element or an in-line element. 
 
-###Give things a class or id so that you can select it
+###CSS Select with class or ID
+
+What if you had two paragraphs of text on your page and you only wanted to give one a green background? You can do that by giving your HTML element a class or ID.
+
+Example: 
+```html
+<p>First paragraph of text</p>
+<p>Another paragraph of text</p>
+```
+
 
 ###What other CSS things do we wnat to do?
 Show border, padding, margin
