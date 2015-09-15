@@ -25,8 +25,10 @@ This tag isn't supposed to be used any more, but it still works in most browsers
 <marquee>What does this tag do?</marquee>
 ```
 
-###TALK ABOUT DIV / SPAN TO GROUP THINGS TOGETHER
-Have you noticed how some HTML tags will drop down to a new line while others don't?
+###Grouping things together with div and span
+How can you group a whole bunch of HTML elements together so that you can control them with your CSS or Javascript. 
+
+Have you noticed how some HTML tags will drop down to a new line while others don't? That is called a block element or an in-line element. 
 
 ###Give things a class or id so that you can select it
 
