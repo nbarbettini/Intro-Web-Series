@@ -1,4 +1,4 @@
-#Day 2: More HTML and CSS
+#Day 2: Let's Make a Maze!
 
 Today we will be making a maze website with multiple pages and learning more HTML + CSS to make them look impressive!
 
