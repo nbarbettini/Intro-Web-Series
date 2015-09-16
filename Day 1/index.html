@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-  <div id="container">
     
     <h1>Welcome to the CoderDojo Web Workshop!</h1>
 
-    <p>In these sessions, we will be learning to make websites using <b><a href="#html">HTML</a></b> and <b><a href="#css">CSS</a></b>. No previous experience is necessary, just have fun and be creative! <p>
-    </p>
+    <p>In these sessions, we will be learning to make websites using <b><a href="#html">HTML</a></b> and <b><a href="#css">CSS</a></b>. No previous experience is necessary, just have fun and be creative! </p>
     <p> Today we will learn a few of the most important HTML tags.  You can use this to share your favorite book or summer activity.  REMEMBER! When you are writing information about yourself, it's smart to keep your private information private.  Don't give your full name or where you can be found.
     </p>
 
@@ -22,23 +20,23 @@
     <p>
       For our meetings, we will be using mozilla.org's web editor called Thimble.  It is at <a href="https://thimble.mozilla.org">thimble.mozilla.org</a>.  You will need an account in order to save your web page you create today. If you are under 13, ask your parent to help.   
     </p>
-    To get started
+    <p>To get started</p>
     <ol>
       <li>Go to <a href="https://thimble.mozilla.org" target="_blank">thimble.mozilla.org</a></li>
       <li>Click on Sign Up in the upper right corner<br>(or Log In if you already created a mozilla account)</li>
       <li>Fill in the form</li>
-      <li>After you are signed in, click <a href="https://thimble.mozilla.org/editor">"Start a project from Scratch"</a></li>
+      <li>After you are signed in, click <a target="new" href="https://thimble.mozilla.org/editor">"Start a project from Scratch"</a></li>
     </ol>
 
 <h1>What is HTML?</h1>
     <p>A web page is made up of the text you want to say, and many HTML elements, called tags, that are enclosed in angle brackets. These tags tell your web browser what to show.
 HTML, and particularly HTML5, is used to give the structure and content of the page, but not specific appearance.  (Later tonight, we'll use CSS to change how it looks.)</p>
     <p>The paragraph below is an example of how you mark a paragraph in HTML, by surrounding it in opening <code>&lt;p&gt;</code> and closing <code>&lt;/p&gt;</code> tags.</p>
-  <pre><code class="language-html">&lt;p&gt;All web pages on the internet use HTML!&lt;/p&gt;
+  <pre class="padded-code"><code class="language-html">&lt;p&gt;All web pages on the internet use HTML!&lt;/p&gt;
 </code></pre>
 <h3>Example - A Web Page About My Favorite Season</h3>
   <p>This bit of code:</p>
-  <pre><code>&lt;html&gt;
+  <pre class="padded-code"><code>&lt;html&gt;
   &lt;head&gt;
   &lt;/head&gt;
   &lt;body&gt;
@@ -57,8 +55,8 @@ HTML, and particularly HTML5, is used to give the structure and content of the p
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-    <p>will produce a web page that looks like this:</p>
-    <p><img src="https://dl.dropboxusercontent.com/u/4042186/lesson1-sample.png" alt="demo"></p>
+    <p>will create a web page that looks like this:</p>
+    <img src="https://dl.dropboxusercontent.com/u/4042186/lesson1-sample.png" alt="demo">
     <p>Check out the <a href="https://d157rqmxrxj6ey.cloudfront.net/jamwave/7089">live demo</a> to experiment yourself.</p>
     
     
@@ -101,12 +99,12 @@ The HTML section will look like this:</p>
 <h3>Heading Tag</h3>
   <p>
   The <code>&lt;h1&gt;</code> tag is used to make the text a heading.</p>
-    <pre><code class="language-html">&lt;h1&gt;My favorite book series is about Harry Potter&lt;/h1&gt;
+    <pre class="padded-code"><code class="language-html">&lt;h1&gt;My favorite book series is about Harry Potter&lt;/h1&gt;
 </code></pre>
     <p>Add a heading to your page. Try changing the tag to an <code>&lt;h2&gt;</code> (and don’t forget to change the closing tag to <code>/h2</code>) - what changed? How many heading tags are there?</p>
     <h3>Paragraph Tag</h3>
     <p>If you type out text, it will be displayed all on one line. What if you want to break it up into paragraphs? That’s where the <code>&lt;p&gt;</code> tag comes in.</p>
-    <pre><code class="language-html">&lt;h1&gt;My favorite book series is about Harry Potter&lt;/h1&gt;
+    <pre class="padded-code"><code class="language-html">&lt;h1&gt;My favorite book series is about Harry Potter&lt;/h1&gt;
 &lt;p&gt;Today, I'd like to tell you about the my favorite book series.&lt;/p&gt;
 &lt;p&gt;It is the book series starring Harry Potter, a young wizard who learns magic at Hogwarts, and who everyone hopes will defeat a very bad wizard.&lt;/p&gt;
 </code></pre>
@@ -114,7 +112,7 @@ The HTML section will look like this:</p>
     
     <h3>List Tags</h3>
     <p>You can add a list to your story using <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> tags. Here is an example:</p>
-<pre><code class="language-html">
+<pre class="padded-code"><code class="language-html">
 Here are some of my favorite Harry Potter characters.
 &lt;ul&gt;
     &lt;li&gt;Harry Potter (of course)&lt;/li&gt;
@@ -135,17 +133,17 @@ Here are some of my favorite Harry Potter characters.
 
     </ul>
     <p>Remember, they can be within other tags.</p>
-    <pre><code class="language-html">&lt;p&gt;First, I'd like to tell you about &lt;u&gt;Harry Potter and the Sorcerer's Stone&lt;/u&gt;.&lt;/p&gt;
+    <pre class="padded-code"><code class="language-html">&lt;p&gt;First, I'd like to tell you about &lt;u&gt;Harry Potter and the Sorcerer's Stone&lt;/u&gt;.&lt;/p&gt;
 &lt;p&gt;It is the first story about my favorite character &lt;strong&gt;Harry Potter&lt;/strong&gt;&lt;/p&gt;
 </code></pre>
     
     <h3>Image Tags</h3>
     <p>This story would be a lot more interesting with pictures! Adding a picture to our story is simple, we just use the <code>&lt;img&gt;</code> tag and tell it where our image is.</p>
     <p>The <code>&lt;img&gt;</code> tag has an attribute called <code>src</code> and this is where we tell it the url to the image we want to use in our story. Here is an example <code>&lt;img&gt;</code> tag (notice that you don’t need a closing tag this time--the oldest tags are like that, including <code>&lt;br&gt;</code>):</p>
-    <pre><code class="language-html">&lt;img src="https://en.wikipedia.org/wiki/File:Harry_Potter_wordmark.svg"&gt;
+    <pre class="padded-code"><code class="language-html">&lt;img src="https://en.wikipedia.org/wiki/File:Harry_Potter_wordmark.svg"&gt;
 </code></pre>
     <p>What if the image is too big for your page? You can tell it to be a certain size:</p>
-    <pre><code class="language-html">&lt;img src="https://en.wikipedia.org/wiki/File:Harry_Potter_wordmark.svg" width="350px"&gt;
+    <pre class="padded-code"><code class="language-html">&lt;img src="https://en.wikipedia.org/wiki/File:Harry_Potter_wordmark.svg" width="350px"&gt;
 </code></pre>
     <p>Do you know what px means?</p>
     <p>Add some images to your web page that have to do with your favorites! Make sure any Google Images Searches have SafeSearch on.</p>
@@ -153,7 +151,7 @@ Here are some of my favorite Harry Potter characters.
     <h3>Link Tags</h3>
     <p>One of the things that makes web pages so amazing for writing about things is you can <strong>link</strong> things together with other web pages on the internet. It is really easy to do!</p>
     <p>The <code>&lt;a&gt;</code> tag has an attribute called <code>href</code> and we will set that attribute equal to the url of the web page we want to link to.  (H stands for "hyper". HTML stands for Hyper-Text Markup Language, and href stands for the Hyper-reference).  Here is an example where I link the name Harry Potter to the web page about Harry Potter on Wikipedia:</p>
-    <pre><code>&lt;a href="https://en.wikipedia.org/wiki/Harry_Potter"&gt;Harry Potter&lt;/a&gt;
+    <pre class="padded-code"><code>&lt;a href="https://en.wikipedia.org/wiki/Harry_Potter"&gt;Harry Potter&lt;/a&gt;
 </code></pre>
     <p>Add a link in your web page.  Is there another character you like? Link to a website about them!</p>
     
@@ -171,7 +169,7 @@ Here are some of my favorite Harry Potter characters.
       The important distinction here is that HTML structures the content,
       while CSS controls how it looks.</p>
     <p><em>Let’s look at some CSS:</em></p>
-    <pre><code class="language-css">body <span class="css-example">{
+    <pre class="padded-code"><code class="language-css">body <span class="css-example">{
   font-family: Arial;
   background-color: lightblue;
 }</span>
@@ -192,7 +190,7 @@ Here are some of my favorite Harry Potter characters.
     <p>CSS follows a basic pattern. First, we select the HTML elements we want to
       change the look of. Then, we say what aspects of their look we want to change.
       Take this snippet for example:</p>
-    <pre><code class="language-css">body <span class="css-example">{
+    <pre class="padded-code"><code class="language-css">body <span class="css-example">{
   font-family: Arial;
   background-color: lightblue;
 }</span>
@@ -213,7 +211,7 @@ Here are some of my favorite Harry Potter characters.
     <p>Declarations are the style modifications we apply in each CSS rule. There are two parts to each declaration: the <strong>property</strong> and the <strong>value</strong>. The pattern is:</p>
     <p><code>property: value;</code></p>
     <p>There are an amazing number of options for declarations in CSS - you can do just about anything you want! But let’s start with just a few. Can you add the following declarations to your page?</p>
-    <pre><code>font-family: Arial;
+    <pre class="padded-code"><code>font-family: Arial;
 text-align: center;
 color: yellow;
 background-color: black;
@@ -232,6 +230,5 @@ Play it at home.  If you peek at it here, please turn your sound off.</p>
     
     <p>If you had fun today and would like to keep learning more HTML and CSS, <a href="https://www.khanacademy.org/computing/computer-programming/html-css">Khan Academy has an excellent tutorial.</a></p>
 
-    </div>
   </body>
 </html>
