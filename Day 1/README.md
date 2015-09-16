@@ -12,3 +12,7 @@ https://d157rqmxrxj6ey.cloudfront.net/jamwave/7060
 
 
 The files are also available permanently here in this github repository. (directly viewable here: http://rawgit.com/CoderDojoSV/Intro-Web-Series/master/Day%201/index.html )
+
+Bonus Activity: There's a fun web game that can help you understand and practice HTML tags. It is at
+https://eraseallkittens.com/
+Play it at home.  If you peek at it here, turn your sound off.
