@@ -7,7 +7,7 @@
 
 All websites are a combination of code in 3 languages: HTML, CSS, and Javascript. We will take a 3 day tour of how they work and create some fun projects!
 
-[:rocket: Day 1 - HTML and CSS - Share Your Favorite Book or Summer Activity](Day 1/)
+[:rocket: Day 1 - HTML and CSS - Share Your Favorite Book or Summer Activity](http://rawgit.com/CoderDojoSV/Intro-Web-Series/master/Day%201/index.html)
 
 [:rocket: Day 2 - More HTML and CSS - Let's Make a Maze!](Day 2/)
 
