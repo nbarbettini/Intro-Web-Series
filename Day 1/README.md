@@ -8,7 +8,7 @@ We will use http://thimble.mozilla.com for creating, editing, and previewing our
 The notes and examples we will use can be seen here:  
 https://d157rqmxrxj6ey.cloudfront.net/jamwave/7060
 
-(You can click the [Reix] button and play with the HTML and CSS which we used to describe HTML and CSS.)
+(You can click the [Remix] button and play with the HTML and CSS which we used to describe HTML and CSS.)
 
 
 The files are also available permanently here in this github repository. (directly viewable here: http://rawgit.com/CoderDojoSV/Intro-Web-Series/master/Day%201/index.html )
