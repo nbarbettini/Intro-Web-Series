@@ -11,9 +11,9 @@
     
     <h1>Welcome to the CoderDojo Web Workshop!</h1>
 
-    <p>In these sessions, we will be learning to make websites using <b>HTML</b> and <b>CSS</b>. No previous experience is necessary, just have fun and be creative! <p>
+    <p>In these sessions, we will be learning to make websites using <b><a href="#html">HTML</a></b> and <b><a href="#css">CSS</a></b>. No previous experience is necessary, just have fun and be creative! <p>
     </p>
-    <p> Today we will learn some of the most important HTML tags.  You can use this to share your favorite book or summer activity.  REMEMBER! When you are writing information about yourself, it's smart to keep your private information private.  Don't give your full name or where you can be found.
+    <p> Today we will learn a few of the most important HTML tags.  You can use this to share your favorite book or summer activity.  REMEMBER! When you are writing information about yourself, it's smart to keep your private information private.  Don't give your full name or where you can be found.
     </p>
 
     <h2>
@@ -91,9 +91,9 @@ The HTML section will look like this:</p>
 -->
   <p>You should delete all of the sample HTML! We will start with it completely blank.</p>
 
-<h1>
+<h1><a name="html">
   HTML
-</h1>
+</a></h1>
     
   <p>Let’s learn a few tags to use on your web page! Most of the time you will have an opening tag and matching closing tag with some text in between.</p>
   <p><img src="https://raw.githubusercontent.com/CoderDojoSV/Medallia-Web-Workshop/master/html%20tags%20pic.jpg" width="60%" alt="html tags"></p>
@@ -103,7 +103,7 @@ The HTML section will look like this:</p>
   The <code>&lt;h1&gt;</code> tag is used to make the text a heading.</p>
     <pre><code class="language-html">&lt;h1&gt;My favorite book series is about Harry Potter&lt;/h1&gt;
 </code></pre>
-    <p>Add a heading to your page. Try changing the tag to an <code>&lt;h2&gt;</code> (and don’t forget to change the closing tag) - what changed? How many heading tags are there?</p>
+    <p>Add a heading to your page. Try changing the tag to an <code>&lt;h2&gt;</code> (and don’t forget to change the closing tag to <code>/h2</code>) - what changed? How many heading tags are there?</p>
     <h3>Paragraph Tag</h3>
     <p>If you type out text, it will be displayed all on one line. What if you want to break it up into paragraphs? That’s where the <code>&lt;p&gt;</code> tag comes in.</p>
     <pre><code class="language-html">&lt;h1&gt;My favorite book series is about Harry Potter&lt;/h1&gt;
@@ -115,19 +115,19 @@ The HTML section will look like this:</p>
     <h3>List Tags</h3>
     <p>You can add a list to your story using <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> tags. Here is an example:</p>
 <pre><code class="language-html">
-Here is a list of some of the Harry Potter books.
+Here are some of my favorite Harry Potter characters.
 &lt;ul&gt;
-    &lt;li&gt;Harry Potter and the Sorcerer's Stone&lt;/li&gt;
-    &lt;li&gt;Harry Potter and the Goblet of Fire&lt;/li&gt;
-    &lt;li&gt;Harry Potter and the Prisoner of Azkaban&lt;/li&gt;
-    &lt;li&gt;Harry Potter meets Percy Jackson&lt;/li&gt;
+    &lt;li&gt;Harry Potter (of course)&lt;/li&gt;
+    &lt;li&gt;Hermione&lt;/li&gt;
+    &lt;li&gt;Professor Lupin&lt;/li&gt;
+    &lt;li&gt;Tonks&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
     <p>The <code>&lt;ul&gt;</code> tag (unordered list) tells the browser this is a list of items. The <code>&lt;li&gt;</code> (list item) tags are used around each list item.</p>
     <p>Add a list to your web page with other books you like, or places you want to go.  What happens if you change the <code>&lt;ul&gt;</code> tag to an <code>&lt;ol&gt;</code>? What do you think that stands for?</p>
     
-    <h3>Tags Within Tags!</h3>
-    <p>Lists are a little tricky because there is one tag within another one. Notice that the <code>&lt;ul&gt;</code> tag comes first and that there are <code>&lt;li&gt;</code> tags within it, before the closing <code>&lt;/ul&gt;</code> tag. This can be used other places too!</p>
+    <h3>What? Tags Within Tags!</h3>
+    <p>Lists are a little tricky because there is one tag within another one. Notice that the <code>&lt;ul&gt;</code> tag comes first and that there are <code>&lt;li&gt;</code> tags within it, before the closing <code>&lt;/ul&gt;</code> tag. This will be used other places too!  Anything you see in a web page is surrounded by a <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code></p> tag.
     <p>Try adding these tags to your page to see what they do: 
     <ul>
       <li><code>&lt;strong&gt;</code><code>&lt;/strong&gt;</code></li>  
@@ -151,34 +151,35 @@ Here is a list of some of the Harry Potter books.
     <p>Add some images to your web page that have to do with your favorites! Make sure any Google Images Searches have SafeSearch on.</p>
     
     <h3>Link Tags</h3>
-    <p>One of the things that makes web pages so amazing for writing about things is you can <strong>link</strong> things together with other web pages on the internet and it is really easy to do!</p>
-    <p>The <code>&lt;a&gt;</code> tag has an attribute called <code>href</code> and we will set that attribute equal to the url of the web page we want to link to.  Here is an example where I link the name Harry Potter to the web page about Harry Potter on Wikipedia:</p>
+    <p>One of the things that makes web pages so amazing for writing about things is you can <strong>link</strong> things together with other web pages on the internet. It is really easy to do!</p>
+    <p>The <code>&lt;a&gt;</code> tag has an attribute called <code>href</code> and we will set that attribute equal to the url of the web page we want to link to.  (H stands for "hyper". HTML stands for Hyper-Text Markup Language, and href stands for the Hyper-reference).  Here is an example where I link the name Harry Potter to the web page about Harry Potter on Wikipedia:</p>
     <pre><code>&lt;a href="https://en.wikipedia.org/wiki/Harry_Potter"&gt;Harry Potter&lt;/a&gt;
 </code></pre>
-    <p>Add a link to your web page. Is there another book you like? Link to a website about it!</p>
+    <p>Add a link in your web page.  Is there another character you like? Link to a website about them!</p>
+    
     <h3>Finish Your Web Page</h3>
-    <p>There are more HTML tags to try, but we now have the skills to make an exciting web page. Complete the content about your favorite book and we will learn some CSS to make the page look better!</p>
+    <p>There are more HTML tags to try, but we now have the skills to make an interesting web page.  Put enough information for your page to make sense, and and next we will learn some CSS to make the page look better!</p>
     
     
-<h1>CSS</h1>
+<h1><a name="css">CSS</a></h1>
     <p>Next we are going to learn about <a href="http://en.wikipedia.org/wiki/CSS">Cascading Style Sheets</a>,
       more commonly known as CSS. We are going to use CSS to improve the <em>look
       and feel</em> of our stories.</p>
     
-    <h3><a id="What_is_CSS_169"></a>What is CSS?</h3>
+    <h3><a name="What_is_CSS">What is CSS?</a></h3>
     <p>CSS is a language that can be used to describe how HTML is supposed to look.
       The important distinction here is that HTML structures the content,
       while CSS controls how it looks.</p>
     <p><em>Let’s look at some CSS:</em></p>
-    <pre><code class="language-css">body <span class="hljs-rules">{
+    <pre><code class="language-css">body <span class="css-example">{
   font-family: Arial;
-  background-color:lightblue;
+  background-color: lightblue;
 }</span>
 </code></pre>
     <p>If you paste the above code into the style.css panel in Thimble, what changes about your website? You might have to click the style.css file on the left side of Thimble page to show the CSS panel.</p>
     
     
-    <h3><a id="How_CSS_Works_188"></a>How CSS Works</h3>
+    <h3><a name="How_CSS_Works">How CSS Works</a></h3>
     <p>We can get an idea of what’s happening by looking at each line of the CSS.</p>
     <ul>
       <li>For all <code>&lt;body&gt;</code> tags
@@ -191,12 +192,12 @@ Here is a list of some of the Harry Potter books.
     <p>CSS follows a basic pattern. First, we select the HTML elements we want to
       change the look of. Then, we say what aspects of their look we want to change.
       Take this snippet for example:</p>
-    <pre><code class="language-css">body <span class="hljs-rules">{
-  font-family:Arial;
-  background-color:lightblue;
+    <pre><code class="language-css">body <span class="css-example">{
+  font-family: Arial;
+  background-color: lightblue;
 }</span>
 </code></pre>
-    <p>We are selecting all <code>&lt;body&gt;</code> tags (there is only 1),
+    <p>We are selecting all <code>&lt;body&gt;</code> tags (usually there is only one),
       then saying we want to modify the font and background color.</p>
     <p>The part that selects the tags is called the <strong>selector</strong>, and each modification
       is called a <strong>declaration</strong>. A combination of a selector and any number
@@ -205,10 +206,10 @@ Here is a list of some of the Harry Potter books.
     <p>Let’s break down the concepts of <strong>selectors</strong> and <strong>declarations</strong>.</p>
     
     
-    <h3><a id="Selectors_218"></a>Selectors</h3>
+    <h3><a name="Selectors">Selectors</a></h3>
     <p>So far we have seen an example selector for all body tags. How can you make a selector for all paragraph tags? Add it to your project, making the paragraphs have a different background color!</p>
 
-    <h3><a id="Declarations_225"></a>Declarations</h3>
+    <h3><a name="Declarations">Declarations</a></h3>
     <p>Declarations are the style modifications we apply in each CSS rule. There are two parts to each declaration: the <strong>property</strong> and the <strong>value</strong>. The pattern is:</p>
     <p><code>property: value;</code></p>
     <p>There are an amazing number of options for declarations in CSS - you can do just about anything you want! But let’s start with just a few. Can you add the following declarations to your page?</p>
@@ -219,7 +220,7 @@ background-color: black;
 </code></pre>
 
 <h1>Putting It All Together!</h1>
-    <p>You have learned the basics for creating web pages! Use your new skills to complete your page.</p>
+    <p>You have learned the basics for creating web pages! Use your new skills to complete your page.  When you have an idea for how to improve the appearance, use your favorite search engine to help you learn how!  If you see a web page that does what you want, you can view any web page's source, or use your browser's developer tools, or even use Mozilla's x-ray goggles.  Look at how someone else did it and see if you can make the same thing happen!</p>
     
     
 <h2>Make More Web Pages</h2>
