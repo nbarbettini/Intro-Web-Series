@@ -117,3 +117,5 @@ This tag isn't supposed to be used any more, but it still works in most browsers
 <marquee>What does this tag do?</marquee>
 ```
 
+###What Else Can You Discover?
+There are so many possibilites with CSS that we can't list them all here - so what else can you discover? Use your favorite search engine to find out about opacity, box-shadow, text-shadow, and gradients. Keep searching to learn more!
