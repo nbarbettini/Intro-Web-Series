@@ -11,8 +11,8 @@ Notice that all the pages use the same CSS file - this way you can easily contro
 
 Create your own version! There a lot of different things you can do, so get creative:
 * Instead of escaping zombies, come up with your own idea. You can change the words and images.
-* Change the CSS to improve how all the pages look.
 * Add new HTML files to make the maze longer and more difficult to find the end.
+* Change the CSS to improve how all the pages look.
 
 #New HTML and CSS To Explore!
 
