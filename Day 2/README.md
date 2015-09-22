@@ -1,21 +1,20 @@
 #Day 2: Let's Make a Maze!
 
-Today we will be making a maze website with multiple pages, but first let's learn more HTML + CSS to make them look impressive!
+Today we will be making a maze website with multiple pages, and trying out new HTML + CSS to make them look impressive!
 
-###Making Your Own Colors
+#Let's Make a Maze!
+Websites usually have many pages that you navigate by clicking on links. We are going to create your first multiple page website, a link maze with only one way to get to the end.
 
-There is a simple way to do colors in CSS, simply by typing in the color:
+Go here and click 'remix': https://d157rqmxrxj6ey.cloudfront.net/bskinny129/7892
 
-```background-color: green;```
+Notice that all the pages use the same CSS file - this way you can easily control how the whole website looks.
 
-But there are many more colors that we don't have names for, like #FF6BC4. That is a hex color - it combines red, blue, and green to make a very specific color. It will give you many many more options for colors to use on your web page.
+Create your own version! There a lot of different things you can do, so get creative:
+* Instead of escaping zombies, come up with your own idea. You can change the words and images.
+* Change the CSS to improve how all the pages look.
+* Add new HTML files to make the maze longer and more difficult to find the end.
 
-In order to find the hex value for a specific color, go to [Color Picker](http://colorpicker.com/). Select the color you want and copy the hex value from the top of the screen.
-
-![color picker](https://raw.githubusercontent.com/CoderDojoSV/Medallia-Web-Workshop/master/color%20picker2.png)
-
-If you are interested in learning how the computer knows that #FF6BC4 is that specific shade of pink, ask a mentor! It is really cool!
-
+#New HTML and CSS To Explore!
 
 ###Grouping things together with div and span
 How can you group a whole bunch of HTML elements together so that you can control them with your CSS or Javascript? 
@@ -63,6 +62,21 @@ Example:
 
 The difference between an ID and a class is that an ID can be used to identify one element, whereas a class can be used to identify more than one.
 
+###Making Your Own Colors
+
+There is a simple way to do colors in CSS, simply by typing in the color:
+
+```background-color: green;```
+
+But there are many more colors that we don't have names for, like #FF6BC4. That is a hex color - it combines red, blue, and green to make a very specific color. It will give you many many more options for colors to use on your web page.
+
+In order to find the hex value for a specific color, go to [Color Picker](http://colorpicker.com/). Select the color you want and copy the hex value from the top of the screen.
+
+![color picker](https://raw.githubusercontent.com/CoderDojoSV/Medallia-Web-Workshop/master/color%20picker2.png)
+
+If you are interested in learning how the computer knows that #FF6BC4 is that specific shade of pink, ask a mentor! It is really cool!
+
+
 ###Borders with Padding and Margin
 Add a div to your page and try out the following CSS:
 
@@ -102,16 +116,4 @@ This tag isn't supposed to be used any more, but it still works in most browsers
 ```html
 <marquee>What does this tag do?</marquee>
 ```
-
-#Let's Make a Maze!
-Websites usually have many pages that you navigate by clicking on links. We are going to create your first multiple page website, a link maze with only one way to get to the end.
-
-Go here and click 'remix': https://d157rqmxrxj6ey.cloudfront.net/bskinny129/7892
-
-Notice that all the pages use the same CSS file - this way you can easily control how the whole website looks.
-
-Create your own version! There a lot of different things you can do, so get creative:
-* Instead of escaping zombies, come up with your own idea. You can change the words and images.
-* Change the CSS to improve how all the pages look.
-* Add new HTML files to make the maze longer and more difficult to find the end.
 
