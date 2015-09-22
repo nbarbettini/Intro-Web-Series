@@ -1,6 +1,6 @@
 #Day 2: Let's Make a Maze!
 
-Today we will be making a maze website with multiple pages, and trying out new HTML + CSS to make them look impressive!
+Today we will be making a maze website with multiple pages, and trying out new HTML + CSS to make it look impressive!
 
 #Let's Make a Maze!
 Websites usually have many pages that you navigate by clicking on links. We are going to create your first multiple page website, a link maze with only one way to get to the end.
