@@ -8,7 +8,7 @@ There is a simple way to do colors in CSS, simply by typing in the color:
 
 ```background-color: green;```
 
-But there are many more colors that we don't have names for. As we saw in the earlier example, it used a color #FF6BC4. That is a hex color - it combines red, blue, and green to make a very specific color. It will give you many many more options for colors to use on your web page.
+But there are many more colors that we don't have names for, like #FF6BC4. That is a hex color - it combines red, blue, and green to make a very specific color. It will give you many many more options for colors to use on your web page.
 
 In order to find the hex value for a specific color, go to [Color Picker](http://colorpicker.com/). Select the color you want and copy the hex value from the top of the screen.
 
@@ -18,7 +18,7 @@ If you are interested in learning how the computer knows that #FF6BC4 is that sp
 
 
 ###Grouping things together with div and span
-How can you group a whole bunch of HTML elements together so that you can control them with your CSS or Javascript. 
+How can you group a whole bunch of HTML elements together so that you can control them with your CSS or Javascript? 
 
 ```html
 <div>
@@ -44,9 +44,9 @@ Try out both of these - what is the difference?
 </span>
 ```
 
-Have you noticed how some HTML tags will drop down to a new line while others don't? That is called a block element or an in-line element. 
+Have you noticed how some HTML tags will drop down to a new line while others don't? That is called a block element or an in-line element.
 
-###CSS Select with class or ID
+###CSS Select with Class or ID
 
 What if you had two paragraphs of text on your page and you only wanted to give one a green background? You can do that by giving your HTML element a class or ID attribute. You can give you class any name you like (one word only, must start with a letter).
 
@@ -63,9 +63,38 @@ Example:
 
 The difference between an ID and a class is that an ID can be used to identify one element, whereas a class can be used to identify more than one.
 
-###What other CSS things do we wnat to do? -- NOT DONE YET
-Show border, padding, margin
-Show onhover
+###Borders with Padding and Margin
+Add a div to your page and try out the following CSS:
+
+```css
+div {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 50px;
+}
+```
+
+How is padding different than margin? How can you use those to arrange items on your page?
+
+Try changing around the different values. Do a search to find the other possible 'border-style' values. 
+
+###Changing the CSS When Your Mouse is Hovering Over It
+Add a div to your page and try out the following CSS:
+
+```css
+div {
+  background-color: red;
+}
+
+div:hover {
+  background-color: blue;
+}
+```
 
 ###FUN HTML TAG FROM THE 90s: marquee
 This tag isn't supposed to be used any more, but it still works in most browsers. Try it!
