@@ -96,7 +96,7 @@ div:hover {
 }
 ```
 
-###A Fun HTML Tag from the 90s: marquee
+###A Fun HTML Tag from the 90s
 This tag isn't supposed to be used any more, but it still works in most browsers. Try it!
 
 ```html
