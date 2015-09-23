@@ -1,5 +1,10 @@
 #Day 2: Let's Make a Maze!
 
+
+Here are today's materials: https://rawgit.com/CoderDojoSV/Intro-Web-Series/master/Day%202/index.html
+
+This page will go away after a bit more styling is added to the html/css version. 
+
 Today we will be making a maze website with multiple pages, and trying out new HTML + CSS to make it look impressive!
 
 #Let's Make a Maze!
