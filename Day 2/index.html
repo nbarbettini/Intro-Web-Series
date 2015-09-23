@@ -26,52 +26,74 @@
 </ul>
 
 <h1>New HTML and CSS To Explore!</h1>
+<img class="centered" width="600px" src="HTML5_and_CSS3_badges.svg">
 
 <h3>Grouping things together with div and span</h3>
 <p>How can you group a whole bunch of HTML elements together so that you can control them with your CSS or Javascript? </p>
 
-<pre><code class='html'>
-&lt;div&gt;
+<code class='html'>
+<pre>&lt;<span class='compareA'>div</span>&gt;
    &lt;img src="http://lorempixel.com/150/150/cats/"&gt;
    Cat description 1
 &lt;/div&gt;
-&lt;div&gt;
+&lt;<span class='compareA'>div</span>&gt;
    &lt;img src="http://lorempixel.com/150/150/cats/"&gt;
    Cat description 2
 &lt;/div&gt;
+</code></pre>
+
+<p>A "div" is one way to group elements.  A "span" is another....</p>
+
+<code class='html'>
+<pre>&lt;<span class='compareB'>span</span>&gt;
+   &lt;img src="http://lorempixel.com/150/150/cats/"&gt;
+   Cat description 1
+&lt;/span&gt;
+&lt;<span class='compareB'>span</span>&gt;
+   &lt;img src="http://lorempixel.com/150/150/cats/"&gt;
+   Cat description 2
+&lt;/span&gt;
 </code></pre>
 
 <p>Try out both of these - what is the difference?</p>
 
-<pre><code class='html'>
-&lt;span&gt;
-   &lt;img src="http://lorempixel.com/150/150/cats/"&gt;
-   Cat description 1
-&lt;/span&gt;
-&lt;span&gt;
-   &lt;img src="http://lorempixel.com/150/150/cats/"&gt;
-   Cat description 2
-&lt;/span&gt;
-</code></pre>
-
 <p>Have you noticed how some HTML tags will drop down to a new line while others don't? That is called a block element or an in-line element.</p>
 
-<h3>CSS Select with Class or ID</h3>
+<h2>CSS Select with Class or ID</h2>
 
 <p>What if you had two paragraphs of text on your page and you only wanted to give one a green background? You can do that by giving your HTML element a class or ID attribute. You can give you class any name you like (one word only, must start with a letter).</p>
 
 Example: 
-<pre><code class='html'>
-&lt;p class="intro"&gt;First paragraph of text&lt;/p&gt;
+<code class='html'>
+<pre>&lt;p class="intro"&gt;First paragraph of text&lt;/p&gt;
 &lt;p&gt;Another paragraph of text&lt;/p&gt;
 </code></pre>
-<pre><code class='css'>
-.intro {
+<code class='css'>
+<pre>.intro {
    background-color: green;
 }
 </code></pre>
 
 <p>The difference between an ID and a class is that an ID can be used to identify one element, whereas a class can be used to identify more than one.</p>
+
+<h3>More styling effects</h3>
+<p>Be daring and if you see something you want to fix, do a quick search for how to make the web page bend to your wish.
+In the course of finishing this page, I realized I wanted to center my images, which was as simple as making an img style like this:
+</p>
+
+<code class='css'>
+<pre>img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</pre></code>
+<p>Then, it just needs to be applied to the image, like this:</p>
+<code class='html'>
+<pre>&lt;img class="centered" width="600px" src="HTML5_and_CSS3_badges.svg"&gt;
+</code></pre>
+
+<h1><span class='rainbow-text'>Colors!</span></h1>
 
 <h3>Making Your Own Colors</h3>
 
@@ -79,19 +101,23 @@ Example:
 
 <pre><code class='css'>background-color: green;</code></pre>
 
-<p>But there are many more colors that we don't have names for, like #FF6BC4. That is a hex color - it combines red, blue, and green to make a very specific color. It will give you many many more options for colors to use on your web page.</p>
+<p>But there are many more colors that we don't have names for, like #FF6BC4. That is a hex color - it combines red, green and blue (have you heard the phrase RGB?) to make a very specific color. It will give you many many more options for colors to use on your web page.</p>
 
 <p>In order to find the hex value for a specific color, go to <a href="http://colorpicker.com/" target="_blank">Color Picker</a>. Select the color you want and copy the hex value from the top of the screen.</p>
 <img src="https://raw.githubusercontent.com/CoderDojoSV/Medallia-Web-Workshop/master/color%20picker2.png">
 
 <p>If you are interested in learning how the computer knows that #FF6BC4 is that specific shade of pink, ask a mentor! It is really cool!</p>
 
+<h3>Matching / discovering colors</h3>
 
-<h3>Borders with Padding and Margin</h3>
+<p>You may find you want to match the color of something else on a web page.  If you are using Chrome and can access the Chrome App Store, ColorZilla is a Chrome add-on that can let you see the color of the pixel you are hovering over.  ColorZilla is also available for Mozilla Firefox.
+
+
+<h2>Borders with Padding and Margin</h2>
 <p>Add a div to your page and try out the following CSS:</p>
 
-<pre><code class='css'>
-div {
+<code class='css'>
+<pre> div {
   background-color: red;
   width: 50px;
   height: 50px;
@@ -103,6 +129,8 @@ div {
 }
 </code></pre>
 
+<div id="sample-div">Answer</div>
+
 <p>How is padding different than margin? How can you use those to arrange items on your page?</p>
 
 <p>Try changing around the different values. Do a search to find the other possible 'border-style' values. </p>
@@ -110,8 +138,8 @@ div {
 <h3>Changing the CSS When Your Mouse is Hovering Over It</h3>
 <p>Add a div to your page and try out the following CSS:</p>
 
-<pre><code class='css'>
-div {
+<code class='css'>
+<pre>div {
   background-color: red;
 }
 
@@ -123,8 +151,8 @@ div:hover {
 <h3>A Fun HTML Tag from the 90s</h3>
 <p>This tag isn't supposed to be used any more, but it still works in most browsers. Try it!</p>
 
-<pre><code class='html'>
-&lt;marquee&gt;What does this tag do?&lt;/marquee&gt;
+<code class='html'>
+<pre>&lt;marquee&gt;What does this tag do?&lt;/marquee&gt;
 </code></pre>
 
 <h3>What Else Can You Discover?</h3>
