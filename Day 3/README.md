@@ -1,15 +1,13 @@
 #Day 3: Beginning with Javascript
 
-Today we will be starting with Javascript - the way you can make your websites interactive!
+You have been amazingly creative with your pages and stories, and today we will learn how to make them interactive with Javascript!
 
-You have been amazingly creative with your stories, and today we will learn how to make them interactive with Javascript
-
-Javascript is the computer language that runs in web browsers (and increasingly, everywhere else, too).
+Javascript is the computer language that runs in web browsers (and increasingly, everywhere else).
 Javascript has good parts and bad parts.  The bad parts make it very hard to build large web sites, but some times make it easier to do small things.  
 
-#Showing prompts and alerts
+#Showing alerts and prompts
 
-You can run javascript right on the address bar of your browser.  Just paste this line (tip: Control-L or Command-L takes you there without touching the mouse) and type the following line:
+You can run javascript right on the address bar of your browser.  (Make a new tab, then...) type the following line:
 
 ```javascript
 javascript:alert("Hello World");
@@ -18,7 +16,7 @@ javascript:alert("Hello World");
 Did you see a box pop up?
 
 
-Prompts are a lot like alerts, but you can ask a question and record the answer in a "variable".  A variable is how a program remembers something.  The program code sets the variable.  Let's use a variable to store a name.  (The value is a bunch of characters, usually called a String.  Variables are often numbers.  There are more complex variable types we will talk about in a moment.)
+Prompts are a lot like alerts, but you can ask a question and save the answer in a "variable".  A variable is how a program remembers something.  The program code stores the variable's value.  Let's use a variable to store a name.  (The value is a bunch of characters, usually called a String.  Variables can store strings, numbers, and many more complex variable types.   We will talk about another a bit later.)
 
 Make a new project and change the body to this:
 ```html
@@ -35,13 +33,13 @@ Make a new project and change the body to this:
 </body>
 ```
 
-We put some javascript right on the web page.  We will not do this for long.  You notice that the entered name is shown in an alert box.  
+We put some javascript right on the web page.  We will not do this for long--it belongs in a separate file.  You notice that the entered name is shown in an alert box.  
 
 Now add the next line before the final </script> tag.
 ```html
     document.getElementById("welcome").innerHTML = "Welcome to Thimble, "+name;
 ```
-Now, you hopefully saw the name appear in the welcome message.  We used a **function** called `getElementById` to hunt down the welcome message in the web page (also called the **document**) and change it.  Cool, huh.  (Notice that the html had to name the welcome element by id="welcome".  In earlier weeks we might have given it an id to apply a style.
+Now, you hopefully saw the name appear at the end of the welcome message.  We used a **function** called `getElementById` to hunt down the welcome message in the web page (also called the **document**) and change it.  Cool, huh.  (Notice that the html had to name the welcome element by ```id="welcome"```.  In earlier weeks we might have given it an id or class to apply a style.
 
 ## Loops
 
@@ -91,7 +89,7 @@ Note: So, now I'm going to stop doing two bad things.  First, it's time to stop 
 Second, I will stop appending to a string inside a loop.
 
 ## Using a separate JavaScript file
-If you are using Mozilla Thimble, in the upper left corner, click the green + that means 'add a new file', then choose Javascript.  (If you hid the file tray by clicking the left-pointing arrow previously, then click the right-pointing arrow to restore it.)  You will see a new file created, probably called script-1.js  
+If you are using Mozilla Thimble, in the upper left corner, click the green + , which is the way to say 'add a new file', then choose Javascript.  (If you hid the file tray by clicking the left-pointing arrow previously, then click the right-pointing arrow to restore it.)  You will see a new file created, probably called script-1.js  
 The first bunch of writing is called a comment.  It is the way you can leave notes to yourself or others.  At the time this was written, it looks like this:
 
 ```javascript
@@ -105,7 +103,7 @@ To use this file, link it to your markup by placing a <script> in the <body> of 
 ...    
 ```
 
-If you thought about deleting the comment, as it suggests in the comments, it's pretty important to get the script tag line and copy it into your html file.  Note that the comment acts like the file is called script.js, so after you copy the line in your html file, make sure yu get the name to match, probably by adding '-1' .  Also, For now, I recommend that it be the last line before the closing body tag.
+It's important to get the ```<script...``` tag line and copy it into your html file.  Note that the comment acts like the file is called script.js, so after you copy the line in your html file, make sure you get the name to match, probably by adding '-1' .  (If you prefer, it's prettier to rename the new file's name.)  Also, For now, I recommend that it be the last line before the closing body tag.
 
 ```html
 ...
@@ -113,7 +111,7 @@ If you thought about deleting the comment, as it suggests in the comments, it's 
 </body>
 ```
 
-Now, you can take the code that asked for a name and integrate it with the code that is put into this file.
+Now, you can take the code that asked for a name and copy it into this file.
 ```javascript
 
 function greetMe(name) {
@@ -134,32 +132,34 @@ Function code is only run when some other code calls it, but it is good practice
 We have been excited to see how you have built projects based on your interests, and we want to encourage you to continue doing that.
 So, we want to give you a few javascript tricks that can make your page even more interactive (or more automated).
 Remember, you need to include your javascript file in the html.
-```html
+```html...
     <script src="script-1.js"></script>
 <body>
 ```
 ## Make a button
 
-HTML is used to actually create a button.  Usually a button is used to be the thing you press after you fill in a form, and will then send the information to the web server.  But that's not the only use for a button.  You can run javascript when a button is pressed, and it does not have to send data to a server.
+Buttons are actually created with HTML.  The oldest use of a button is for telling a web page's form that you are done filling it in and that the input should be sent to a web erver.  That's not the only use for a button,  but it's the default use, so code has to be written if you don't want information to be sent to a web server and new page to be displayed.  In particular, you can run javascript when a button is pressed, and the button can do something to the web page you are looking at.
 
-In your javscript file, add a bit of code that can clear your output area.  We will put it in a function that can be called when the button is clicked.  Try this:
+In your javscript file, add a bit of code to clear your output area.  We will put it in a function that can be called when the button is clicked.  Try this:
 ```javascript
 function clearOutputDev() {
   document.getElementById("output").innerHTML = "";
 }
 ```
 
-Then add the button and its callbackto the HTML
+Then add the button and its callback function to the HTML
 ```html
 <button id="myButton" type="button" onClick="clearOutputDiv();return false;">Click Me!</button>
 ```
+Tip: the ```return false;``` prevents information being sent to the web server.
 
 ## Buttons to make images bigger or smaller.
 
 Buttons are also frequently used to do things with images, like make slide shows go to the next image, or make maps get bigger or smaller.  Let's mix it up and add button to make the images you used last week get bigger or smaller.
 
 Last week, I added this image to the presentation
-[logo]: https://raw.githubusercontent.com/CoderDojoSV/Medallia-Web-Workshop/master/HTML5_and_CSS3_badges.svg "logo"
+Logo: 
+![alt text](https://raw.githubusercontent.com/CoderDojoSV/Medallia-Web-Workshop/master/HTML5_and_CSS3_badges.svg "logo")
 
 Let's tweak the HTML to give images a slightly better class name.
 
@@ -192,17 +192,59 @@ function scaleImages(scaleFactor) {
 }
 ```
 
-This changes what you've seen by a bit.  Rather than asking for one Id, we're asking for all that match a class.
+This is a little different than the function you saw before.  Rather than asking for one element that matches a single id, we're asking for all elements that match a class.
 And, rather than iterating one-by-one with an index (i), we are asking javascript to iterate through all of them.
 
-## create an array of colors
-Another important type of variable is the Array.  An array is a list of things, often strings.
+## Create an array of colors
+Another important type of variable is the Array.  An array is a list of things, and yu can get to the members one-by-one.  This is an array strings.  
+
+```javascript
+var colors = ['red', 'green', 'blue', 'orange', 'yellow'];
+```
+
+You can learn the length of an array by the .length property.  (It's a property, not a function, so you do not use ())
+
+You can try this if you want to see it in action
+
+```javascript
+var colors = ['red', 'green', 'blue', 'orange', 'yellow'];
+alert("I know of "+colors.length+" colors")
+colors.push(['brown','cyan','navy','olive']);
+alert("Now I know of "+colors.length+" colors")
+```
+
+## Introducing Math.random()
+
+Javascript has many math functions that can work with numbers.  (Numbers can be integers or floating point numbers and unlike nearly all other computer languages, you don't have to treat them differently.)
+
+If you are wanting to do something fun to a web page, adding randomness by the ```Math.random``` function.
+Calling Math.random returns a random number between 0 and 1.  You need to multiply it by the array length, and then turn it into an integer in order to use it to get a value from an array.  Math.floor takes a floating point number and drops the fraction portion (For example, Math.floor(1.99) returns 1.
+
+```javascript
+var colors = ['red', 'green', 'blue', 'orange', 'yellow'];
+var colorIndex = Math.floor(Math.random() * colors.length);
+document.getElementById("welcome").color = colors[colorIndex];
+```
+
 
 ## Use a loop to change color
 
-## introduce a Math.random.
+## Introducing setInterval
 
-## introduce setInterval.
+One of the fun things you can do is to make something happen automatically.  Javascript's ```setInterval()``` is a way to make something happen over time.  It's use is tricky, and it is very easy to bog down a computer to the point where it is unusably slow (at least until the web page is closed) but can do some cool effects if used well.
+
+Try this
+```javascript
+var colorCycle = ['red', 'green', 'blue', 'orange', 'yellow'];
+var colorCycleCounter = 0;
+function cycleColor() {
+  document.getElementById("welcome").color = colorCycle[colorCycleCounter];
+  if (cycleColorCounter >= colorCycle.length) {
+    colorCycleCounter=0;
+  }
+}
+var colorCycleIntervalTimer = setInterval(cycleColor,100);
+```
 
 The other place you would see the name is on the console log.  Open up the console log by the developer tools.  On Chrome, on a PC, press Control-Shift-I and on a Mac, press Command-Option-I.  In the top of the area that appears, clock on the word "Console".  In this window, you will see output that Javascript produces, either console logs as they are written, or warnings and errors in the page itself.
 
