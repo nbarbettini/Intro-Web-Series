@@ -1,20 +1,36 @@
 #Day 3: Beginning with JavaScript
 
-You have been amazingly creative with your pages and stories, and today we will learn how to make them interactive with JavaScript!
+You have been amazingly creative with your pages and stories, and today we will learn how to make them even more interactive with JavaScript!
 
+Covering Javascirpt in one night is ambitious.  The goal is to get to the point where you understand what happens on this page:  https://d157rqmxrxj6ey.cloudfront.net/jamwave/18168  There's *a lot* of information here, so if you feel fatigued, feel free to jump to the end and explore Khan Academy's hour of code for Javascript.  It is really good and isn't just on one long page.
+
+Tonight, we'll go over
+- Introducing Javascript: 
+  * What JavaScript looks like (very quickly)
+  * Simple alerts, prompts, and variables
+  * Simple if..then..else control
+  * a bit of debugging advice
+  * Putting javascript in a different file
+- Then for your project
+  * How to define a list of colors
+  * Use a function to change color of the text. 
+  * (optional) How to make a button and make it do something
+- We'll wrap up with suggestions on where you can learn more
+ 
+ 
 JavaScript is the computer language that runs in web browsers (and increasingly, everywhere else).
-JavaScript has good parts and bad parts.  The bad parts make it very hard to build large web sites, but some times make it easier to do small things.  
+JavaScript has good parts and bad parts.  The bad parts can make it challenging to build large web sites, but some times make it easier to do small things, particularly when learning.  So, not everything you see here is how professionals use JavaScript.  
 
 ### What JavaScript looks like (the syntax)
 
-There's so much to say about syntax that it could take all night, but we know you want to get to the fun stuff, so glance over this and move on.  You will see this syntax used in the examples that follow this section.
+There's so much to say about syntax that it could take all night, but we know you want to get to the fun stuff, so glance over this and keep moving on.  You will see this syntax used in the examples that follow this section.
 
 Some of the key JavaScript syntax concepts are 
-- statements end in semicolons: ```;```
-- usually, statements are written one-per-line  (unlike HTML)
-- typically, javascript is run in functions, which have names, accept parameters, and "do a function".  You call functions by stating their name and putting ```()``` behind the name, and including any parameters between the parenthesis.
-- you must use ```{``` paired with ```}``` when you have more than one line of code grouped together, and sometimes (like a function's code) it is always in matching ```{``` paired with ```}```
-- javascript has control mechanisms like if..then , loops (see below) , 
+- Statements should end in semicolons: ```;```
+- Usually, statements are written one-per-line  (unlike HTML)
+- Typically, JavaScript is run in functions, which have names, accept parameters, and "do something specific".  You call functions by stating their name and putting ```()``` behind the name, and including any parameters between the parenthesis.
+- You must use ```{``` paired with ```}``` when you have more than one line of code grouped together, and sometimes (like a function's code) matching ```{``` paired with ```}``` is required.
+- JavaScript has control mechanisms like if..then..else , loops (see below), and function calls.  Here's what an if..then..else statement with a pretend function call looks like...
 ```javascript 
 if (something-is-true) {
   doThis();
@@ -22,7 +38,7 @@ if (something-is-true) {
   doThat();
 }
 ```
-- when you are writing code inside a control structure, be sure to indent it at least 2 spaces and get in the habit of using curly braces.
+- when you are writing code inside a control structure, be sure to indent it at least 2 spaces more thn the lines above, and make a habit of using curly braces around blocks of code.  
 
 #Showing alerts and prompts
 
@@ -35,7 +51,7 @@ javascript:alert("Hello World");
 Did you see a box pop up?
 
 
-Prompts are a lot like alerts, but you can ask a question and save the answer in a "variable".  A variable is how a program remembers something.  Variables have names (and the names cannot contain anything other than letters, numbers, and the underscore character.)  The program code stores the variable's value.  Let's use a variable to store a name.  (The value is a bunch of characters, usually called a String.  Variables can store strings, numbers, and many more complex variable types.   We will talk about another a bit later.)
+Prompts are a lot like alerts, but you can ask a question and save the answer in a "variable".  A variable is how a program remembers something.  Variables have names (and the names cannot contain anything other than letters, numbers, and the underscore character.)  When you first use a variable, you have to declaare it is a variable by the magic letters **var** in front of it.  The program code stores the variable's value.  Let's use a variable to store a name.  (The value is a bunch of characters, usually called a String.  Variables can store strings, numbers, and many more complex variable types.   We will talk about another, called an array, a bit later.)
 
 Make a new project and change the body to this:
 ```html
@@ -54,13 +70,11 @@ Make a new project and change the body to this:
 
 By the way, we put some javascript right in the html page.  We will not do this for long--it belongs in a separate file.  
 
-You probably noticed that the name was shown in an alert box.  That gets irritating.  Delete that alert line and replace it with this:
-
-It should be placed right before the final ```</script>``` tag.
+You probably noticed that the name was shown in an alert box.  That gets irritating.  Delete that alert line and replace it with this.  It should be placed right before the final ```</script>``` tag: 
 ```javascript
     document.getElementById("welcome").innerHTML = "Welcome to Thimble, "+name;
 ```
-Now, you hopefully saw the name appear at the end of the welcome message.  We used a **function** called `getElementById` to hunt down the welcome message in the web page (also called the **document**) and change it.  Cool, huh?  (Notice that the html had to name the welcome element by ```id="welcome"```.  In earlier weeks we might have given it an id or class to apply a style.  Later tonight, we'll use this to apply a new style.
+Now, you hopefully saw the name appear at the end of the welcome message.  We used a **function** called `getElementById` to hunt down the welcome message in the web page (also called the **document**) and change it.  Cool, huh?  (Notice that the html had to name the welcome element by ```id="welcome"```.  In earlier weeks we might have given it an id or class to use css to apply a style.  Later tonight, we'll use javascript to apply a new style.
 
 
 ## Loops, If statements, and tests
@@ -162,77 +176,9 @@ Remember, you need to include your javascript file in the html.
     <script src="script-1.js"></script>
 <body>
 ```
-## Make a button
-
-Buttons are actually created with HTML.  The oldest use of a button is for telling a web page's form that you are done filling it in and that the input should be sent to a web server.  That's not the only use for a button,  but it's the default use, so code has to be written if you don't want information to be sent to a web server and new page to be displayed.  In particular, you can run javascript when a button is pressed, and the button can do something to the web page you are looking at.
-
-In your javscript file, add a bit of code to clear your output area.  We will put it in a function that can be called when the button is clicked.  Try this:
-```javascript
-function clearOutput() {
-  document.getElementById("output").innerHTML = "";
-}
-```
-
-Then add the button and its callback function to the HTML
-```html
-<button id="myButton" type="button" onClick="clearOutput();return false;">Clear It!</button>
-```
-Expert Tip: the ```return false;``` prevents the page from going away and a request being sent to the web server.
-
-## Buttons to make images bigger or smaller.
-
-Buttons are also frequently used to do things with images, like make slide shows go to the next image, or make maps get bigger or smaller.  Let's mix it up and add button to make the images you used last week get bigger or smaller.
-
-Last week, I added this image to the presentation
-Logo: 
-![alt text](https://rawgithub.com/CoderDojoSV/Intro-Web-Series/master/Day%202/HTML5_and_CSS3_badges.svg "logo")
-
-Let's tweak the HTML to give images a slightly better class name.
-
-```html
-<img class="centeredImage" width="600px" src="https://rawgithub.com/CoderDojoSV/Intro-Web-Series/master/Day%202/HTML5_and_CSS3_badges.svg">
-```
-
-and the css
-```css
-img.centeredImage {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-```
-
-Next, lets write a bit of javascript and html to add sizing buttons.
-
-```html
-<p>
-<button id="smallerButton" type="button" onClick="javascript:scaleImages(0.9);return false;">Smaller</button>
-<button id="biggerButton" type="button" onClick="javascript:scaleImages(1.1);return false;">Bigger</button>
-</p>
-```
-
-Now, if you had one or more images with the class centeredImage, you can make them all bigger by this code. 
-Note I am using a global variable (which is not good) and that there are 
-```javascript
-var currentWidth=100;
-function scaleImages(scale) {
-  currentWidth *= scale;
-
-  var elems = document.getElementsByClassName("centeredImage");
-  for (var i = 0; i < elems.length; i++) {
-    elems[i].style.maxWidth = currentWidth + '%';
-  }
-}
-```
-
-This is a little different than the function you saw before.  Rather than asking for one element that matches a single id, we're asking for all elements that match a class.
-And, rather than iterating one-by-one with an index (i), we are asking javascript to iterate through all of them.
-
-You can see an example of this code at https://d157rqmxrxj6ey.cloudfront.net/jamwave/17762
-
 
 ## Create an array of colors
-Another important type of variable is the Array.  An array is a list of things, and yu can get to the members one-by-one.  This is an array strings.  
+An important type of variable is the Array.  An array is a list of things, and yu can get to the members one-by-one.  This is an array strings.  
 
 ```javascript
 var colors = ['red', 'green', 'blue', 'orange', 'yellow'];
@@ -314,6 +260,80 @@ var colorCycleIntervalTimer = setInterval(cycleColor,100);
 
 You can see this in action at https://d157rqmxrxj6ey.cloudfront.net/jamwave/18168
 
+*Seriously, if you are getting tired of reading, skip to the end and start Khan Academy's Hour of Code on Javascript.*
+
+## Want more? Make a button
+
+Buttons are actually created with HTML.  The oldest use of a button is for telling a web page's form that you are done filling it in and that the input should be sent to a web server.  That's not the only use for a button,  but it's the default use, so code has to be written if you don't want information to be sent to a web server and new page to be displayed.  In particular, you can run javascript when a button is pressed, and the button can do something to the web page you are looking at.
+
+In your javscript file, add a bit of code to clear your output area.  We will put it in a function that can be called when the button is clicked.  Try this:
+```javascript
+function clearOutput() {
+  document.getElementById("output").innerHTML = "";
+}
+```
+
+Then add the button and its callback function to the HTML
+```html
+<button id="myButton" type="button" onClick="clearOutput();return false;">Clear It!</button>
+```
+Expert Tip: the ```return false;``` prevents the page from going away and a request being sent to the web server.
+
+## Buttons to make images bigger or smaller.
+
+Buttons are also frequently used to do things with images, like make slide shows go to the next image, or make maps get bigger or smaller.  Let's mix it up and add button to make the images you used last week get bigger or smaller.
+
+Last week, I added this image to the presentation
+
+Logo: 
+![alt text](https://rawgithub.com/CoderDojoSV/Intro-Web-Series/master/Day%202/HTML5_and_CSS3_badges.svg "logo")
+
+Let's tweak the HTML to give images a slightly better class name.
+
+```html
+<img class="centeredImage" width="600px" src="https://rawgithub.com/CoderDojoSV/Intro-Web-Series/master/Day%202/HTML5_and_CSS3_badges.svg">
+```
+
+and the css
+```css
+img.centeredImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+```
+
+Next, lets write a bit of javascript and html to add sizing buttons.
+
+```html
+<p>
+<button id="smallerButton" type="button" onClick="javascript:scaleImages(0.9);return false;">Smaller</button>
+<button id="biggerButton" type="button" onClick="javascript:scaleImages(1.1);return false;">Bigger</button>
+</p>
+```
+
+Now, if you had one or more images with the class centeredImage, you can make them all bigger by this code. 
+Note I am using a global variable (which is not good) and that there are 
+```javascript
+var currentWidth=100;
+function scaleImages(scale) {
+  currentWidth *= scale;
+
+  var elems = document.getElementsByClassName("centeredImage");
+  for (var i = 0; i < elems.length; i++) {
+    elems[i].style.maxWidth = currentWidth + '%';
+  }
+}
+```
+
+This is a little different than the function you saw before.  Rather than asking for one element that matches a single id, we're asking for all elements that match a class.
+And, rather than iterating one-by-one with an index (i), we are asking javascript to iterate through all of them.
+
+You can see an example of this code at https://d157rqmxrxj6ey.cloudfront.net/jamwave/17762
+
+
+
+
 # Project suggestions
 
 - Can you apply a random background color chosen from a list?  You would want the list to be lighter colors (see http://www.w3.org/TR/css3-color/#svg-color) or choose your own from a color picker (inside Thimble or https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool or http://colorpicker.com)  OR if you use dark colors, use CSS to change your default color to be very light.
@@ -324,11 +344,11 @@ You can see this in action at https://d157rqmxrxj6ey.cloudfront.net/jamwave/1816
 
 We barely scratched the surface of Javascript in this class.
 
-Khan Academy has great resources for learning more.
+# Khan Academy's Hour of Code with Javascript
 If you run out of ideas tonight and.or just want a quick lesson that takes about an hour, look at Khan Academy's Hour Of Code lesson at https://www.khanacademy.org/computing/hour-of-code
 
 There is a wealth of resources for learning Javascript.  
-Khan Anademy's site is truely an awesome way to learn Javascript.  https://www.khanacademy.org/computing/computer-programming/programming
+Khan Academy's site is truely an awesome way to learn Javascript.  https://www.khanacademy.org/computing/computer-programming/programming
 
 The reason we chose Thimble for this class is that it is structured for learners.  Scroll on down at https://thimble.mozilla.org/ and you will see many projects.  Choose one that looks interesting.
 
