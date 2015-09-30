@@ -5,6 +5,25 @@ You have been amazingly creative with your pages and stories, and today we will 
 Javascript is the computer language that runs in web browsers (and increasingly, everywhere else).
 Javascript has good parts and bad parts.  The bad parts make it very hard to build large web sites, but some times make it easier to do small things.  
 
+# What Javascript looks like (the syntax)
+
+There's so much to say about syntax that it could take all night, but we know you want to get to the fun stuff, so glance over this and move on.  You will see this syntax used in the examples that follow this section.
+
+Some of the key javascript syntax concepts are 
+- statements end in semicolons, i.e. ```;```
+- usually statements are one-per-line
+- typically, javascript is run in functions, which have names, accept parameters, and "do a function".  You call functions by stating their name and putting ```()``` behind the name, and including any parameters between the parenthesis.
+- you must use ```{``` paired with ```}``` when you have more than one line of code grouped together, and sometimes (like a function's code) it is always in matching ```{``` paired with ```}```
+- javascript has control mechanisms like if..then , loops (see below) , 
+```javascript 
+if (something-is-true) {
+  doThis();
+} else {
+  doThat();
+}
+```
+- when you are writing code inside a control structure, be sure to indent it at least 2 spaces and get in the habit of using curly braces.
+
 #Showing alerts and prompts
 
 You can run javascript right on the address bar of your browser.  (Make a new tab, then...) type the following line:
@@ -16,7 +35,7 @@ javascript:alert("Hello World");
 Did you see a box pop up?
 
 
-Prompts are a lot like alerts, but you can ask a question and save the answer in a "variable".  A variable is how a program remembers something.  The program code stores the variable's value.  Let's use a variable to store a name.  (The value is a bunch of characters, usually called a String.  Variables can store strings, numbers, and many more complex variable types.   We will talk about another a bit later.)
+Prompts are a lot like alerts, but you can ask a question and save the answer in a "variable".  A variable is how a program remembers something.  Variables have names (and the names cannot contain anything other than letters, numbers, and the underscore character.)  The program code stores the variable's value.  Let's use a variable to store a name.  (The value is a bunch of characters, usually called a String.  Variables can store strings, numbers, and many more complex variable types.   We will talk about another a bit later.)
 
 Make a new project and change the body to this:
 ```html
@@ -28,22 +47,23 @@ Make a new project and change the body to this:
   <script>
     var name = prompt("What is your name?");
     alert("Hello "+name);
-    document.getElementById("welcome").innerHTML = "Welcome to Thimble, "+name;
   </script>
 </body>
 ```
+You notice that the entered name is shown in an alert box.  
 
-We put some javascript right on the web page.  We will not do this for long--it belongs in a separate file.  You notice that the entered name is shown in an alert box.  
+By the way, we put some javascript right on the html page.  We will not do this for long--it belongs in a separate file.  
 
-Now add the next line before the final </script> tag.
-```html
+Now add the next line before the final ```</script>``` tag.
+```javascript
     document.getElementById("welcome").innerHTML = "Welcome to Thimble, "+name;
 ```
 Now, you hopefully saw the name appear at the end of the welcome message.  We used a **function** called `getElementById` to hunt down the welcome message in the web page (also called the **document**) and change it.  Cool, huh.  (Notice that the html had to name the welcome element by ```id="welcome"```.  In earlier weeks we might have given it an id or class to apply a style.
 
-## Loops
 
-Javascript is like most computer languages because it has ways to control the program action.  Two basic control mechanisms are loops and conditionals.  You usually use a conditional to know when to stop the loop.
+## Conditionals and Loops
+
+Javascript is like most computer languages because it has ways to control the program action.  Two basic control mechanisms are loops and conditionals.  If (conditional_expression) lets you decide if a block of code should be run before running it.  Also, you typically use a conditional_expression to know when to stop the loop.
 
 Let's modify the web page just a bit more to create a place where output can appear.
 Put this line before the `<script>` tag you put in earlier.
@@ -138,20 +158,20 @@ Remember, you need to include your javascript file in the html.
 ```
 ## Make a button
 
-Buttons are actually created with HTML.  The oldest use of a button is for telling a web page's form that you are done filling it in and that the input should be sent to a web erver.  That's not the only use for a button,  but it's the default use, so code has to be written if you don't want information to be sent to a web server and new page to be displayed.  In particular, you can run javascript when a button is pressed, and the button can do something to the web page you are looking at.
+Buttons are actually created with HTML.  The oldest use of a button is for telling a web page's form that you are done filling it in and that the input should be sent to a web server.  That's not the only use for a button,  but it's the default use, so code has to be written if you don't want information to be sent to a web server and new page to be displayed.  In particular, you can run javascript when a button is pressed, and the button can do something to the web page you are looking at.
 
 In your javscript file, add a bit of code to clear your output area.  We will put it in a function that can be called when the button is clicked.  Try this:
 ```javascript
-function clearOutputDev() {
+function clearOutput() {
   document.getElementById("output").innerHTML = "";
 }
 ```
 
 Then add the button and its callback function to the HTML
 ```html
-<button id="myButton" type="button" onClick="clearOutputDiv();return false;">Click Me!</button>
+<button id="myButton" type="button" onClick="clearOutput();return false;">Clear It!</button>
 ```
-Tip: the ```return false;``` prevents information being sent to the web server.
+Expert Tip: the ```return false;``` prevents information being sent to the web server.
 
 ## Buttons to make images bigger or smaller.
 
@@ -159,12 +179,12 @@ Buttons are also frequently used to do things with images, like make slide shows
 
 Last week, I added this image to the presentation
 Logo: 
-![alt text](https://raw.githubusercontent.com/CoderDojoSV/Medallia-Web-Workshop/master/HTML5_and_CSS3_badges.svg "logo")
+![alt text](https://raw.githubusercontent.com/CoderDojoSV/Intro-Web-Series/master/Day%202/HTML5_and_CSS3_badges.svg "logo")
 
 Let's tweak the HTML to give images a slightly better class name.
 
 ```html
-<img class="centeredImage" width="600px" src="HTML5_and_CSS3_badges.svg">
+<img class="centeredImage" width="600px" src="https://raw.githubusercontent.com/CoderDojoSV/Intro-Web-Series/master/Day%202/HTML5_and_CSS3_badges.svg">
 ```
 
 and the css
@@ -186,8 +206,8 @@ Next, lets write a bit of javascript and html to add sizing buttons.
 Now, if you had one or more images with the class centeredImage, you can make them all bigger by 
 ```javascript
 function scaleImages(scaleFactor) {
-  for (var oneImage in document.getElementsByClassname("centeredImage") {
-     oneImage.width *= scaleFactor;
+  for (var thisImage in document.getElementsByClassname("centeredImage") {
+     thisImage.width *= scaleFactor;
   }
 }
 ```
