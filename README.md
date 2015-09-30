@@ -1,7 +1,6 @@
-#Intro to Web Programming
+#Introduction to Web Site Programming
 
-*3 days of HTML, CSS, and Javascript fun! *
-
+*3 days of HTML, CSS, and Javascript fun!* presented as a workshop for beginners by CoderDojo Silicon Valley
 
 ##Description
 
