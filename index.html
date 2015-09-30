@@ -1,51 +1,396 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
+    <meta charset="UTF-8">
     <title>Introduction to Web Site Programming by CoderDojoSV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Introduction to Web Site Programming</h1>
+      <h2 class="project-tagline">3 days of HTML/CSS/Javascript fun!</h2>
+      <a href="https://github.com/CoderDojoSV/Intro-Web-Series" class="btn">View on GitHub</a>
+      <a href="https://github.com/CoderDojoSV/Intro-Web-Series/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/CoderDojoSV/Intro-Web-Series/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <header>
-      <div class="container">
-        <h1>Introduction to Web Site Programming</h1>
-        <h2>3 days of HTML/CSS/Javascript fun!</h2>
+    <section class="main-content">
+      <h1>
+<a id="day-3-beginning-with-javascript" class="anchor" href="#day-3-beginning-with-javascript" aria-hidden="true"><span class="octicon octicon-link"></span></a>Day 3: Beginning with JavaScript</h1>
 
-        <section id="downloads">
-          <a href="https://github.com/CoderDojoSV/Intro-Web-Series/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/CoderDojoSV/Intro-Web-Series/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/CoderDojoSV/Intro-Web-Series" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+<p>You have been amazingly creative with your pages and stories, and today we will learn how to make them even more interactive with JavaScript!</p>
 
-    <div class="container">
-      <section id="main_content">
-        <h1>
-<a id="introduction-to-web-site-programming" class="anchor" href="#introduction-to-web-site-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to Web Site Programming</h1>
+<p>Covering Javascirpt in one night is ambitious.  The goal is to get to the point where you understand what happens on this page:  <a href="https://d157rqmxrxj6ey.cloudfront.net/jamwave/18168">https://d157rqmxrxj6ey.cloudfront.net/jamwave/18168</a>  There's <em>a lot</em> of information here, so if you feel fatigued, feel free to jump to the end and explore Khan Academy's hour of code for Javascript.  It is really good and isn't just on one long page.</p>
 
-<p><em>3 days of HTML, CSS, and Javascript fun!</em> presented as a workshop for beginners by CoderDojo Silicon Valley</p>
+<p>Tonight, we'll go over</p>
+
+<ul>
+<li>Introducing Javascript: 
+
+<ul>
+<li>What JavaScript looks like (very quickly)</li>
+<li>Simple alerts, prompts, and variables</li>
+<li>Simple if..then..else control</li>
+<li>a bit of debugging advice</li>
+<li>Putting javascript in a different file</li>
+</ul>
+</li>
+<li>Then for your project
+
+<ul>
+<li>How to define a list of colors</li>
+<li>Use a function to change color of the text. </li>
+<li>(optional) How to make a button and make it do something</li>
+</ul>
+</li>
+<li>We'll wrap up with suggestions on where you can learn more</li>
+</ul>
+
+<p>JavaScript is the computer language that runs in web browsers (and increasingly, everywhere else).
+JavaScript has good parts and bad parts.  The bad parts can make it challenging to build large web sites, but some times make it easier to do small things, particularly when learning.  So, not everything you see here is how professionals use JavaScript.  </p>
+
+<h3>
+<a id="what-javascript-looks-like-the-syntax" class="anchor" href="#what-javascript-looks-like-the-syntax" aria-hidden="true"><span class="octicon octicon-link"></span></a>What JavaScript looks like (the syntax)</h3>
+
+<p>There's so much to say about syntax that it could take all night, but we know you want to get to the fun stuff, so glance over this and keep moving on.  You will see this syntax used in the examples that follow this section.</p>
+
+<p>Some of the key JavaScript syntax concepts are </p>
+
+<ul>
+<li>Statements should end in semicolons: <code>;</code>
+</li>
+<li>Usually, statements are written one-per-line  (unlike HTML)</li>
+<li>Typically, JavaScript is run in functions, which have names, accept parameters, and "do something specific".  You call functions by stating their name and putting <code>()</code> behind the name, and including any parameters between the parenthesis.</li>
+<li>You must use <code>{</code> paired with <code>}</code> when you have more than one line of code grouped together, and sometimes (like a function's code) matching <code>{</code> paired with <code>}</code> is required.</li>
+<li>JavaScript has control mechanisms like if..then..else , loops (see below), and function calls.  Here's what an if..then..else statement with a pretend function call looks like...</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">if</span> (something<span class="pl-k">-</span>is<span class="pl-k">-</span><span class="pl-c1">true</span>) {
+  doThis();
+} <span class="pl-k">else</span> {
+  doThat();
+}</pre></div>
+
+<ul>
+<li>when you are writing code inside a control structure, be sure to indent it at least 2 spaces more thn the lines above, and make a habit of using curly braces around blocks of code.<br>
+</li>
+</ul>
+
+<h1>
+<a id="showing-alerts-and-prompts" class="anchor" href="#showing-alerts-and-prompts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Showing alerts and prompts</h1>
+
+<p>You can run JavaScript right on the address bar of your browser.  (Make a new tab, then...) type the following line:</p>
+
+<div class="highlight highlight-source-js"><pre>javascript<span class="pl-k">:</span><span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>Hello World<span class="pl-pds">"</span></span>);</pre></div>
+
+<p>Did you see a box pop up?</p>
+
+<p>Prompts are a lot like alerts, but you can ask a question and save the answer in a "variable".  A variable is how a program remembers something.  Variables have names (and the names cannot contain anything other than letters, numbers, and the underscore character.)  When you first use a variable, you have to declaare it is a variable by the magic letters <strong>var</strong> in front of it.  The program code stores the variable's value.  Let's use a variable to store a name.  (The value is a bunch of characters, usually called a String.  Variables can store strings, numbers, and many more complex variable types.   We will talk about another, called an array, a bit later.)</p>
+
+<p>Make a new project and change the body to this:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;!DOCTYPE html&gt;
+&lt;<span class="pl-ent">html</span>&gt;&lt;<span class="pl-ent">body</span>&gt;
+
+  &lt;<span class="pl-ent">h1</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>welcome<span class="pl-pds">"</span></span>&gt;Welcome to Thimble&lt;/<span class="pl-ent">h1</span>&gt;
+
+  &lt;<span class="pl-ent">p</span>&gt;Make something &lt;<span class="pl-ent">strong</span>&gt;amazing&lt;/<span class="pl-ent">strong</span>&gt; with the web!&lt;/<span class="pl-ent">p</span>&gt;
+<span class="pl-s1">  &lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    <span class="pl-k">var</span> name <span class="pl-k">=</span> <span class="pl-c1">prompt</span>(<span class="pl-s"><span class="pl-pds">"</span>What is your name?<span class="pl-pds">"</span></span>);</span>
+<span class="pl-s1">    <span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>Hello <span class="pl-pds">"</span></span><span class="pl-k">+</span>name);</span>
+<span class="pl-s1">  &lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">body</span>&gt;&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<p>By the way, we put some javascript right in the html page.  We will not do this for long--it belongs in a separate file.  </p>
+
+<p>You probably noticed that the name was shown in an alert box.  That gets irritating.  Delete that alert line and replace it with this.  It should be placed right before the final <code>&lt;/script&gt;</code> tag: </p>
+
+<div class="highlight highlight-source-js"><pre>    <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">"</span>welcome<span class="pl-pds">"</span></span>).innerHTML <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>Welcome to Thimble, <span class="pl-pds">"</span></span><span class="pl-k">+</span>name;</pre></div>
+
+<p>Now, you hopefully saw the name appear at the end of the welcome message.  We used a <strong>function</strong> called <code>getElementById</code> to hunt down the welcome message in the web page (also called the <strong>document</strong>) and change it.  Cool, huh?  (Notice that the html had to name the welcome element by <code>id="welcome"</code>.  In earlier weeks we might have given it an id or class to use css to apply a style.  Later tonight, we'll use javascript to apply a new style.</p>
 
 <h2>
-<a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h2>
+<a id="loops-if-statements-and-tests" class="anchor" href="#loops-if-statements-and-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loops, If statements, and tests</h2>
 
-<p>All websites are a combination of code in 3 languages: HTML, CSS, and Javascript. We will take a 3 day tour of how they work and create some fun projects!</p>
+<p>JavaScript is like most computer languages because it has ways to control the program action.  Two basic control mechanisms are loops and conditionals.  <code>If (conditional_expression)</code> lets you test and choose if a block of code should be run before running it.  Similarly, you typically use a conditional_expression to know when to stop the loop.</p>
 
-<p><a href="http://rawgit.com/CoderDojoSV/Intro-Web-Series/master/Day%201/index.html"><img class="emoji" title=":rocket:" alt=":rocket:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f680.png" height="20" width="20" align="absmiddle"> Day 1 - HTML and CSS - Share Your Favorite Book or Summer Activity</a></p>
+<p>Let's modify the web page just a bit more to create a place where output can appear.
+Put this line before the <code>&lt;script&gt;</code> tag you put in earlier.</p>
 
-<p><a href="Day%202/"><img class="emoji" title=":rocket:" alt=":rocket:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f680.png" height="20" width="20" align="absmiddle"> Day 2 - More HTML and CSS - Let's Make a Maze!</a></p>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">p</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>output<span class="pl-pds">"</span></span>&gt;How happy am I?&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
 
-<p><a href="day3.md/"><img class="emoji" title=":rocket:" alt=":rocket:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f680.png" height="20" width="20" align="absmiddle"> Day 3 - A quick intro to Javascript - Add cool effects to your site</a></p>
-      </section>
-    </div>
+<p>Now, after the opening <code>&lt;script&gt;</code> tag but before the closing <code>&lt;/script&gt;</code> tag, add the following</p>
 
-    
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> i<span class="pl-k">=</span><span class="pl-c1">0</span>;
+<span class="pl-k">while</span> (i<span class="pl-k">&lt;</span><span class="pl-c1">10</span>) {
+   <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">"</span>output<span class="pl-pds">"</span></span>).innerHTML <span class="pl-k">+=</span> <span class="pl-s"><span class="pl-pds">"</span> :)<span class="pl-pds">"</span></span>;
+   i <span class="pl-k">+=</span> <span class="pl-c1">1</span>;
+}</pre></div>
+
+<p>We set the value of <code>i</code> first to 0, then added a smiley and incremented <code>i</code> until it was no longer less than 10.
+So, how many smileys were printed?</p>
+
+<p>Note: += is a math-like operator that says 'add the thing on the right to the existing thing on the left of +='.
+So if i was 0, then i += 1 will increment i to be 1.  Since we're adding the smiley face to the innerHTML, it will just add another smiley the end.</p>
+
+<p>People who create programming languages usually try to make ways to write stuff shorter, so the following line is actually identical.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">for</span> (<span class="pl-k">var</span> i<span class="pl-k">=</span><span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> <span class="pl-c1">10</span>; i<span class="pl-k">+=</span><span class="pl-c1">1</span>) {
+  <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">"</span>output<span class="pl-pds">"</span></span>).innerHTML <span class="pl-k">+=</span> <span class="pl-s"><span class="pl-pds">"</span>:) <span class="pl-pds">"</span></span>;
+}</pre></div>
+
+<p>Warning: adding strings to existing strings gets slower the more times it happens.  If you changed the numer of times it loops from 10 to a higher number like 100, you would see it much, much slower the higher you went.  </p>
+
+<h2>
+<a id="advice-when-you-dont-know-what-is-going-wrong" class="anchor" href="#advice-when-you-dont-know-what-is-going-wrong" aria-hidden="true"><span class="octicon octicon-link"></span></a>Advice: When you don't know what is going wrong...</h2>
+
+<p>This is important advice if what you are doing is not working and you don't know why!
+If something is wrong with your JavaScript, the JavaScript Console may be the only place to see error messages.  Open up the console log by the developer tools.  On Chrome, on a PC, press Control-Shift-I and on a Mac, press Command-Option-I.  In the top of the area that appears, click on the word "Console".  In this window, you will see output that JavaScript produces, either console logs as they are written, or warnings and errors in the page itself.  (On Firefox, use Control-Shift-K or Command-Option-K.  Internet Explorer? F12) 
+Tip: You can put messages you write in the console log, too.  For instance, after you asked for name, you could also print it in the console.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>Someone named <span class="pl-pds">"</span></span><span class="pl-k">+</span>name<span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span> is visiting the page<span class="pl-pds">"</span></span>);</pre></div>
+
+<p>Of course, you also created the output area, and you can write to that and see it in the browser itself.</p>
+
+<p>Note: So, now I'm going to stop doing two bad things.  First, it's time to stop putting javascript in the html page!
+Second, I will stop appending to a string inside a loop.</p>
+
+<h2>
+<a id="using-a-separate-javascript-file" class="anchor" href="#using-a-separate-javascript-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using a separate JavaScript file</h2>
+
+<p>If you are using Mozilla Thimble, in the upper left corner, click the green + , which is the way to say 'add a new file', then choose JavaScript.  (If you hid the file tray by clicking the left-pointing arrow previously, then click the right-pointing arrow to restore it.)  You will see a new file created, probably called script-1.js<br>
+The first bunch of writing is called a comment.  It is the way you can leave notes to yourself or others.  At the time this was written, it looks like this:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">/***************************</span>
+<span class="pl-c">This is JavaScript (JS), the programming lanaguage that powers the web (and this is a comment, which you can delete).</span>
+<span class="pl-c"></span>
+<span class="pl-c">To use this file, link it to your markup by placing a &lt;script&gt; in the &lt;body&gt; of your HTML file:</span>
+<span class="pl-c"></span>
+<span class="pl-c">  &lt;body&gt;</span>
+<span class="pl-c">    &lt;script src="script.js"&gt;&lt;/script&gt;</span>
+<span class="pl-c">...    </span></pre></div>
+
+<p>It's important to get the <code>&lt;script...</code> tag line and copy it into your html file.  Note that the comment acts like the file is called script.js, so after you copy the line in your html file, make sure you get the name to match, probably by adding '-1' .  (If you prefer, it's prettier to rename the new file's name.)  Also, For now, I recommend that it be the last line before the closing body tag.</p>
+
+<p>Now, you can take the javascript code that asked for a name and copy it into this new .js file.</p>
+
+<div class="highlight highlight-source-js"><pre>
+<span class="pl-k">function</span> <span class="pl-en">greetMe</span>(<span class="pl-smi">name</span>) {
+  <span class="pl-k">var</span> today <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>();
+  <span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>Hello <span class="pl-pds">"</span></span> <span class="pl-k">+</span> name <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span>, today is <span class="pl-pds">"</span></span> <span class="pl-k">+</span> today.toDateString());
+}
+
+<span class="pl-k">var</span> name <span class="pl-k">=</span> <span class="pl-c1">prompt</span>(<span class="pl-s"><span class="pl-pds">"</span>What is your name?<span class="pl-pds">"</span></span>);
+greetMe(name);</pre></div>
+
+<p>Then, go back and replace the old script block with this</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>script-1.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">body</span>&gt;</pre></div>
+
+<p>The code that was put into the file you created uses a <strong>function</strong> to do it's work.
+You were able to use it just by passing in the name you gathered earlier.
+Function code is only run when some other code calls it, but it is good practice to make sure it has been seen by the browser prior to being called, otherwise the browser will not know what to do when it sees it.  (If you called greetMe before declaring what greetMe should do, you would see an error in the javascript console.)</p>
+
+<p>The examples so far are visible at <a href="https://d157rqmxrxj6ey.cloudfront.net/jamwave/15578">https://d157rqmxrxj6ey.cloudfront.net/jamwave/15578</a></p>
+
+<h1>
+<a id="your-project" class="anchor" href="#your-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Your Project</h1>
+
+<p>We have been excited to see how you have built projects based on your interests, and we want to encourage you to continue doing that.
+So, we want to give you a few javascript tricks that can make your page even more interactive (or more automated).
+Remember, you need to include your javascript file in the html.</p>
+
+<pre lang="html..."><code>    &lt;script src="script-1.js"&gt;&lt;/script&gt;
+&lt;body&gt;
+</code></pre>
+
+<h2>
+<a id="create-an-array-of-colors" class="anchor" href="#create-an-array-of-colors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create an array of colors</h2>
+
+<p>An important type of variable is the Array.  An array is a list of things, and you can get to the items one-by-one.  This is an example array of strings that happen to be color names:  </p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> colors <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>red<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>green<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>blue<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>orange<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>yellow<span class="pl-pds">'</span></span>];</pre></div>
+
+<p>You can learn the length of an array by the .length property.  (It's a property, not a function, so you do not use <code>()</code> to get the value.)</p>
+
+<p>You can try this if you want to see it in action</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> colors <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>red<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>green<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>blue<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>orange<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>yellow<span class="pl-pds">'</span></span>];
+<span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>I know of <span class="pl-pds">"</span></span><span class="pl-k">+</span>colors.<span class="pl-c1">length</span><span class="pl-k">+</span><span class="pl-s"><span class="pl-pds">"</span> colors<span class="pl-pds">"</span></span>);
+colors.<span class="pl-c1">push</span>(<span class="pl-s"><span class="pl-pds">'</span>brown<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>cyan<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>navy<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>olive<span class="pl-pds">'</span></span>);
+<span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">"</span>Now I know of <span class="pl-pds">"</span></span><span class="pl-k">+</span>colors.<span class="pl-c1">length</span><span class="pl-k">+</span><span class="pl-s"><span class="pl-pds">"</span> colors<span class="pl-pds">"</span></span>);</pre></div>
+
+<h2>
+<a id="introducing-mathrandom" class="anchor" href="#introducing-mathrandom" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introducing Math.random()</h2>
+
+<p>JavaScript has many math functions that can work with numbers.  (Numbers can be integers or floating point numbers and unlike nearly all other computer languages, you don't have to treat them differently.)</p>
+
+<p>If you are wanting to do something fun to a web page, adding randomness by the <code>Math.random</code> function.
+Calling Math.random returns a random number between 0 and 1.  You need to multiply it by the array length, and then turn it into an integer in order to use it to get a value from an array.  Math.floor takes a floating point number and drops the fraction portion (For example, Math.floor(1.99) returns 1.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> colors <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>red<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>green<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>blue<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>orange<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>yellow<span class="pl-pds">'</span></span>];
+<span class="pl-k">var</span> colorIndex <span class="pl-k">=</span> <span class="pl-c1">Math</span>.<span class="pl-c1">floor</span>(<span class="pl-c1">Math</span>.<span class="pl-c1">random</span>() <span class="pl-k">*</span> colors.<span class="pl-c1">length</span>);
+<span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">"</span>welcome<span class="pl-pds">"</span></span>).<span class="pl-c1">style</span>.<span class="pl-c1">color</span> <span class="pl-k">=</span> colors[colorIndex];</pre></div>
+
+<h2>
+<a id="use-a-loop-to-change-color" class="anchor" href="#use-a-loop-to-change-color" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use a loop to change color</h2>
+
+<p>Another javascript control is the while statment.  We've used it already, but lets use it to change the color of the welcome message.  (Remember that your HTML needs to declare that one area of text is <code>id="welcome"</code>
+Try this</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">/* use your color array from earlier!! var colors = ['red', 'green', 'blue', 'orange', 'yellow']; */</span>
+<span class="pl-k">var</span> colorsCycleCounter <span class="pl-k">=</span> <span class="pl-c1">0</span>;
+<span class="pl-k">function</span> <span class="pl-en">cycleColor</span>() {
+  <span class="pl-k">while</span> (colorsCycleCounter <span class="pl-k">&lt;</span> colors.<span class="pl-c1">length</span>) {
+    <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">"</span>welcome<span class="pl-pds">"</span></span>).<span class="pl-c1">style</span>.<span class="pl-c1">color</span> <span class="pl-k">=</span> colors[colorsCycleCounter] ;
+    colorsCycleCounter <span class="pl-k">+=</span> <span class="pl-c1">1</span>;
+  }
+  sleep(<span class="pl-c1">100</span>);
+}
+cycleColor();</pre></div>
+
+<h2>
+<a id="introducing-setinterval" class="anchor" href="#introducing-setinterval" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introducing setInterval</h2>
+
+<p>One of the fun things you can do is to make something happen automatically.  JavaScript's <code>setInterval()</code> is a way to make something happen again and again over time.  It is tricky to get right (because of variable scope), and it is very easy to bog down a computer to the point where it is unusably slow (if many fast interval timers are running or they have lots of code) but can do some cool effects if used correctly.</p>
+
+<p>Try this change to cycleColor and how it is wired into an interval timer</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">/* use your color array from earlier!! var colors = ['red', 'green', 'blue', 'orange', 'yellow']; */</span>
+<span class="pl-k">var</span> colorsCycleCounter <span class="pl-k">=</span> <span class="pl-c1">0</span>;
+<span class="pl-k">function</span> <span class="pl-en">cycleColor</span>() {
+  <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">"</span>welcome<span class="pl-pds">"</span></span>).<span class="pl-c1">style</span>.<span class="pl-c1">color</span> <span class="pl-k">=</span> colors[colorsCycleCounter] ;
+  <span class="pl-k">if</span> (colorsCycleCounter <span class="pl-k">&gt;=</span> colors.<span class="pl-c1">length</span>) {
+    colorsCycleCounter<span class="pl-k">=</span><span class="pl-c1">0</span>;
+  } <span class="pl-k">else</span> {
+    colorsCycleCounter <span class="pl-k">+=</span> <span class="pl-c1">1</span>;
+  }
+}
+<span class="pl-k">var</span> colorCycleIntervalTimer <span class="pl-k">=</span> <span class="pl-c1">setInterval</span>(cycleColor,<span class="pl-c1">100</span>); <span class="pl-c">/* trigger every 0.1 seconds*/</span></pre></div>
+
+<p>One thing that this code neglects is to clean up the timer.  Let's say you only want the color to cycle for a little while, then stop, this would be better code...</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> colorsCycleCounter <span class="pl-k">=</span> <span class="pl-c1">0</span>;
+<span class="pl-k">function</span> <span class="pl-en">cycleColor</span>() {
+  <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">"</span>welcome<span class="pl-pds">"</span></span>).<span class="pl-c1">style</span>.<span class="pl-c1">color</span> <span class="pl-k">=</span> colors[colorsCycleCounter <span class="pl-k">%</span> colors.<span class="pl-c1">length</span>] ;
+  <span class="pl-k">if</span> (colorsCycleCounter <span class="pl-k">&lt;</span><span class="pl-c1">100</span>) {
+    colorsCycleCounter <span class="pl-k">+=</span> <span class="pl-c1">1</span>;
+  } <span class="pl-k">else</span> {
+    <span class="pl-c1">clearInterval</span>(colorCycleIntervalTimer);
+  }
+}
+<span class="pl-k">var</span> colorCycleIntervalTimer <span class="pl-k">=</span> <span class="pl-c1">setInterval</span>(cycleColor,<span class="pl-c1">100</span>);</pre></div>
+
+<p>You can see this in action at <a href="https://d157rqmxrxj6ey.cloudfront.net/jamwave/18168">https://d157rqmxrxj6ey.cloudfront.net/jamwave/18168</a></p>
+
+<p><em>Seriously, if you are getting tired of reading, skip to the end and start Khan Academy's Hour of Code on Javascript.</em></p>
+
+<h2>
+<a id="optional-make-a-button" class="anchor" href="#optional-make-a-button" aria-hidden="true"><span class="octicon octicon-link"></span></a>(Optional) Make a button</h2>
+
+<p>Buttons are actually created with HTML.  The oldest use of a button is for telling a web page's form that you are done filling it in and that the input should be sent to a web server.  That's not the only use for a button,  but it's the default use, so code has to be written if you don't want information to be sent to a web server and new page to be displayed.  In particular, you can run javascript when a button is pressed, and the button can do something to the web page you are looking at.</p>
+
+<p>In your javscript file, add a bit of code to clear your output area.  We will put it in a function that can be called when the button is clicked.  Try this:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">function</span> <span class="pl-en">clearOutput</span>() {
+  <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">"</span>output<span class="pl-pds">"</span></span>).innerHTML <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>;
+}</pre></div>
+
+<p>Then add the button and its callback function to the HTML</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">button</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>myButton<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">onClick</span>=<span class="pl-s"><span class="pl-pds">"</span>clearOutput();return false;<span class="pl-pds">"</span></span>&gt;Clear It!&lt;/<span class="pl-ent">button</span>&gt;</pre></div>
+
+<p>Expert Tip: the <code>return false;</code> prevents the page from going away and a request being sent to the web server.</p>
+
+<h2>
+<a id="buttons-to-make-images-bigger-or-smaller" class="anchor" href="#buttons-to-make-images-bigger-or-smaller" aria-hidden="true"><span class="octicon octicon-link"></span></a>Buttons to make images bigger or smaller.</h2>
+
+<p>Buttons are also frequently used to do things with images, like make slide shows go to the next image, or make maps get bigger or smaller.  Let's mix it up and add button to make the images you used last week get bigger or smaller.</p>
+
+<p>Last week, I added this image to the presentation</p>
+
+<p>Logo: 
+<img src="https://rawgithub.com/CoderDojoSV/Intro-Web-Series/master/Day%202/HTML5_and_CSS3_badges.svg" alt="alt text" title="logo"></p>
+
+<p>Let's tweak the HTML to give images a slightly better class name.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>centeredImage<span class="pl-pds">"</span></span> <span class="pl-e">width</span>=<span class="pl-s"><span class="pl-pds">"</span>600px<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://rawgithub.com/CoderDojoSV/Intro-Web-Series/master/Day%202/HTML5_and_CSS3_badges.svg<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<p>and the css</p>
+
+<div class="highlight highlight-source-css"><pre><span class="pl-ent">img</span><span class="pl-e">.centeredImage</span> {
+    <span class="pl-c1"><span class="pl-c1">display</span></span>: <span class="pl-c1">block</span>;
+    <span class="pl-c1"><span class="pl-c1">margin-left</span></span>: <span class="pl-c1">auto</span>;
+    <span class="pl-c1"><span class="pl-c1">margin-right</span></span>: <span class="pl-c1">auto</span>;
+}</pre></div>
+
+<p>Next, let's write a bit of javascript and html to add sizing buttons.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">p</span>&gt;
+&lt;<span class="pl-ent">button</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>smallerButton<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">onClick</span>=<span class="pl-s"><span class="pl-pds">"</span>javascript:scaleImages(0.9);return false;<span class="pl-pds">"</span></span>&gt;Smaller&lt;/<span class="pl-ent">button</span>&gt;
+&lt;<span class="pl-ent">button</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>biggerButton<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">onClick</span>=<span class="pl-s"><span class="pl-pds">"</span>javascript:scaleImages(1.1);return false;<span class="pl-pds">"</span></span>&gt;Bigger&lt;/<span class="pl-ent">button</span>&gt;
+&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
+
+<p>Now, if you had one or more images with the class centeredImage, you can make them all bigger by this code. 
+Note I am using a global variable (which is not good) and that there are </p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> currentWidth<span class="pl-k">=</span><span class="pl-c1">100</span>;
+<span class="pl-k">function</span> <span class="pl-en">scaleImages</span>(<span class="pl-smi">scale</span>) {
+  currentWidth <span class="pl-k">*=</span> scale;
+
+  <span class="pl-k">var</span> elems <span class="pl-k">=</span> <span class="pl-c1">document</span>.getElementsByClassName(<span class="pl-s"><span class="pl-pds">"</span>centeredImage<span class="pl-pds">"</span></span>);
+  <span class="pl-k">for</span> (<span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> elems.<span class="pl-c1">length</span>; i<span class="pl-k">++</span>) {
+    elems[i].<span class="pl-c1">style</span>.maxWidth <span class="pl-k">=</span> currentWidth <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span>%<span class="pl-pds">'</span></span>;
+  }
+}</pre></div>
+
+<p>This is a little different than the function you saw before.  Rather than asking for one element that matches a single id, we're asking for all elements that match a class.
+And, rather than iterating one-by-one with an index (i), we are asking javascript to iterate through all of them.</p>
+
+<p>You can see an example of this code at <a href="https://d157rqmxrxj6ey.cloudfront.net/jamwave/17762">https://d157rqmxrxj6ey.cloudfront.net/jamwave/17762</a></p>
+
+<h1>
+<a id="project-suggestions" class="anchor" href="#project-suggestions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project suggestions</h1>
+
+<ul>
+<li>Can you apply a random background color chosen from a list?  You would want the list to be lighter colors (see <a href="http://www.w3.org/TR/css3-color/#svg-color">http://www.w3.org/TR/css3-color/#svg-color</a>) or choose your own from a color picker (inside Thimble or <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool</a> or <a href="http://colorpicker.com">http://colorpicker.com</a>)  OR if you use dark colors, use CSS to change your default color to be very light.</li>
+<li>Can you put together everything you learned to use an array of URLs to randomly choose the image that is loaded as you go from page to page in your site?</li>
+<li>Can you use a timer to make the page automatically choose where to go next (after, say, 10000 milliseconds?)  Setting <code>location.href=</code> will cause the browser to go to the location you set.</li>
+</ul>
+
+<h1>
+<a id="next-steps" class="anchor" href="#next-steps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Next Steps</h1>
+
+<p>We barely scratched the surface of Javascript in this class.  You can easily learn more online...</p>
+
+<h2>
+<a id="khan-academys-hour-of-code-with-javascript" class="anchor" href="#khan-academys-hour-of-code-with-javascript" aria-hidden="true"><span class="octicon octicon-link"></span></a>Khan Academy's Hour of Code with Javascript</h2>
+
+<p>If you run out of ideas tonight and.or just want a quick lesson that takes about an hour, look at Khan Academy's Hour Of Code lesson at <a href="https://www.khanacademy.org/computing/hour-of-code">https://www.khanacademy.org/computing/hour-of-code</a></p>
+
+<h2>
+<a id="still-more" class="anchor" href="#still-more" aria-hidden="true"><span class="octicon octicon-link"></span></a>still more...</h2>
+
+<p>There is a wealth of resources for learning Javascript.<br>
+Khan Academy's site is truely an awesome way to learn Javascript.  <a href="https://www.khanacademy.org/computing/computer-programming/programming">https://www.khanacademy.org/computing/computer-programming/programming</a></p>
+
+<p>The reason we chose Thimble for this class is that it is structured for learners.  Scroll on down at <a href="https://thimble.mozilla.org/">https://thimble.mozilla.org/</a> and you will see many projects.  Choose one that looks interesting.</p>
+
+<p>If you visit the official Hour Of Code site at <a href="https://code.org/learn">https://code.org/learn</a> , you will see recommendations for several great, free sites for learning javascript.  There are a number of very good paid sites as well.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/CoderDojoSV/Intro-Web-Series">Introduction to Web Site Programming</a> is maintained by <a href="https://github.com/CoderDojoSV">CoderDojoSV</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
