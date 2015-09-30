@@ -189,7 +189,7 @@ Logo:
 Let's tweak the HTML to give images a slightly better class name.
 
 ```html
-<img class="centeredImage" width="600px" src="https://raw.githubusercontent.com/CoderDojoSV/Intro-Web-Series/master/Day%202/HTML5_and_CSS3_badges.svg">
+<img class="centeredImage" width="600px" src="https://rawgithub.com/CoderDojoSV/Intro-Web-Series/master/Day%202/HTML5_and_CSS3_badges.svg">
 ```
 
 and the css
@@ -204,15 +204,22 @@ img.centeredImage {
 Next, lets write a bit of javascript and html to add sizing buttons.
 
 ```html
-<button id="smallerButton" type="button" onClick="scaleImages(0.9);return false;">Smaller</button>
-<button id="biggerButton" type="button" onClick="scaleImages(1.1);return false;">Bigger</button>
+<p>
+<button id="smallerButton" type="button" onClick="javascript:scaleImages(0.9);return false;">Smaller</button>
+<button id="biggerButton" type="button" onClick="javascript:scaleImages(1.1);return false;">Bigger</button>
+</p>
 ```
 
-Now, if you had one or more images with the class centeredImage, you can make them all bigger by 
+Now, if you had one or more images with the class centeredImage, you can make them all bigger by this code. 
+Note I am using a global variable (which is not good) and that there are 
 ```javascript
-function scaleImages(scaleFactor) {
-  for (var thisImage in document.getElementsByClassname("centeredImage") {
-     thisImage.width *= scaleFactor;
+var currentWidth=100;
+function scaleImages(scale) {
+  currentWidth *= scale;
+
+  var elems = document.getElementsByClassName("centeredImage");
+  for (var i = 0; i < elems.length; i++) {
+    elems[i].style.maxWidth = currentWidth + '%';
   }
 }
 ```
