@@ -2,20 +2,20 @@
 
 You have been amazingly creative with your pages and stories, and today we will learn how to make them even more interactive with JavaScript!
 
-Covering Javascirpt in one night is ambitious.  The goal is to get to the point where you understand what happens on this page:  https://d157rqmxrxj6ey.cloudfront.net/jamwave/18168  There's *a lot* of information here, so if you feel fatigued, feel free to jump to the end and explore Khan Academy's hour of code for Javascript.  It is really good and isn't just on one long page.
+Covering Javascript in one night is ambitious.  The goal is to get to the point where you understand what happens on this page:  https://d157rqmxrxj6ey.cloudfront.net/jamwave/18168  There's *a lot* of information here, so if you feel fatigued, feel free to jump to the end and explore Khan Academy's Hour of Code for JavaScript.  It is really good and isn't just on one long page.
 
 Tonight, we'll go over
-- Introducing Javascript: 
+- Introducing JavaScript: 
   * What JavaScript looks like (very quickly)
   * Simple alerts, prompts, and variables
   * Simple if..then..else control
   * a bit of debugging advice
-  * Putting javascript in a different file
-- Then for your project
+  * Putting JavaScript in a different file
+- Then for *your* project
   * How to define a list of colors
   * Use a function to change color of the text. 
   * (optional) How to make a button and make it do something
-- We'll wrap up with suggestions on where you can learn more
+- We'll wrap up with suggestions on where you can learn more on your own
  
  
 JavaScript is the computer language that runs in web browsers (and increasingly, everywhere else).
