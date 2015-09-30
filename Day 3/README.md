@@ -152,6 +152,7 @@ The code that was put into the file you created uses a **function** to do it's w
 You were able to use it just by passing in the name you gathered earlier.
 Function code is only run when some other code calls it, but it is good practice to make sure it has been seen by the browser prior to being called, otherwise the browser will not know what to do when it sees it.  (If you called greetMe before declaring what greetMe should do, you would see an error in the javascript console.)
 
+The examples so far are visible at https://d157rqmxrxj6ey.cloudfront.net/jamwave/15578
 # Your Project
 
 We have been excited to see how you have built projects based on your interests, and we want to encourage you to continue doing that.
@@ -227,6 +228,9 @@ function scaleImages(scale) {
 This is a little different than the function you saw before.  Rather than asking for one element that matches a single id, we're asking for all elements that match a class.
 And, rather than iterating one-by-one with an index (i), we are asking javascript to iterate through all of them.
 
+You can see an example of this code at https://d157rqmxrxj6ey.cloudfront.net/jamwave/17762
+
+
 ## Create an array of colors
 Another important type of variable is the Array.  An array is a list of things, and yu can get to the members one-by-one.  This is an array strings.  
 
@@ -240,9 +244,9 @@ You can try this if you want to see it in action
 
 ```javascript
 var colors = ['red', 'green', 'blue', 'orange', 'yellow'];
-alert("I know of "+colors.length+" colors")
-colors.push(['brown','cyan','navy','olive']);
-alert("Now I know of "+colors.length+" colors")
+alert("I know of "+colors.length+" colors");
+colors.push('brown','cyan','navy','olive');
+alert("Now I know of "+colors.length+" colors");
 ```
 
 ## Introducing Math.random()
@@ -255,31 +259,77 @@ Calling Math.random returns a random number between 0 and 1.  You need to multip
 ```javascript
 var colors = ['red', 'green', 'blue', 'orange', 'yellow'];
 var colorIndex = Math.floor(Math.random() * colors.length);
-document.getElementById("welcome").color = colors[colorIndex];
+document.getElementById("welcome").style.color = colors[colorIndex];
 ```
 
 
 ## Use a loop to change color
+Another javascript control is the while statment.  We've used it already, but lets use it to change the color of the welcome message.  (Remember that your HTML needs to declare that one area of text is ```id="welcome"```
+Try this
+```javascript
+/* use your color array from earlier!! var colors = ['red', 'green', 'blue', 'orange', 'yellow']; */
+var colorsCycleCounter = 0;
+function cycleColor() {
+  while (colorsCycleCounter < colors.length) {
+    document.getElementById("welcome").style.color = colors[colorsCycleCounter] ;
+    colorsCycleCounter += 1;
+  }
+  sleep(100);
+}
+cycleColor();
+```
 
 ## Introducing setInterval
 
-One of the fun things you can do is to make something happen automatically.  JavaScript's ```setInterval()``` is a way to make something happen over time.  It's use is tricky, and it is very easy to bog down a computer to the point where it is unusably slow (at least until the web page is closed) but can do some cool effects if used well.
+One of the fun things you can do is to make something happen automatically.  JavaScript's ```setInterval()``` is a way to make something happen again and again over time.  It is tricky to get right (because of variable scope), and it is very easy to bog down a computer to the point where it is unusably slow (if many fast interval timers are running or they have lots of code) but can do some cool effects if used correctly.
 
-Try this
+Try this change to cycleColor and how it is wired into an interval timer
 ```javascript
-var colorCycle = ['red', 'green', 'blue', 'orange', 'yellow'];
-var colorCycleCounter = 0;
+/* use your color array from earlier!! var colors = ['red', 'green', 'blue', 'orange', 'yellow']; */
+var colorsCycleCounter = 0;
 function cycleColor() {
-  document.getElementById("welcome").color = colorCycle[colorCycleCounter];
-  if (cycleColorCounter >= colorCycle.length) {
-    colorCycleCounter=0;
+  document.getElementById("welcome").style.color = colors[colorsCycleCounter] ;
+  if (colorsCycleCounter >= colors.length) {
+    colorsCycleCounter=0;
+  } else {
+    colorsCycleCounter += 1;
+  }
+}
+var colorCycleIntervalTimer = setInterval(cycleColor,100); /* trigger every 0.1 seconds*/
+```
+
+One thing that this code neglects is to clean up the timer.  Let's say you only want the color to cycle for a little while, then stop, this would be better code...
+```javascript
+var colorsCycleCounter = 0;
+function cycleColor() {
+  document.getElementById("welcome").style.color = colors[colorsCycleCounter % colors.length] ;
+  if (colorsCycleCounter <100) {
+    colorsCycleCounter += 1;
+  } else {
+    clearInterval(colorCycleIntervalTimer);
   }
 }
 var colorCycleIntervalTimer = setInterval(cycleColor,100);
 ```
 
-The other place you would see the name is on the console log.  Open up the console log by the developer tools.  On Chrome, on a PC, press Control-Shift-I and on a Mac, press Command-Option-I.  In the top of the area that appears, clock on the word "Console".  In this window, you will see output that JavaScript produces, either console logs as they are written, or warnings and errors in the page itself.
+You can see this in action at https://d157rqmxrxj6ey.cloudfront.net/jamwave/18168
 
-# bigger examples
-?magic 8 ball?  
-?number guessing game?
+# Project suggestions
+
+- Can you apply a random background color chosen from a list?  You would want the list to be lighter colors (see http://www.w3.org/TR/css3-color/#svg-color) or choose your own from a color picker (inside Thimble or https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool or http://colorpicker.com)  OR if you use dark colors, use CSS to change your default color to be very light.
+- Can you put together everything you learned to use an array of URLs to randomly choose the image that is loaded as you go from page to page in your site?
+- Can you use a timer to make the page automatically choose where to go next (after, say, 10000 milliseconds?)  Setting ```location.href=``` will cause the browser to go to the location you set.
+
+# Next Steps
+
+We barely scratched the surface of Javascript in this class.
+
+Khan Academy has great resources for learning more.
+If you run out of ideas tonight and.or just want a quick lesson that takes about an hour, look at Khan Academy's Hour Of Code lesson at https://www.khanacademy.org/computing/hour-of-code
+
+There is a wealth of resources for learning Javascript.  
+Khan Anademy's site is truely an awesome way to learn Javascript.  https://www.khanacademy.org/computing/computer-programming/programming
+
+The reason we chose Thimble for this class is that it is structured for learners.  Scroll on down at https://thimble.mozilla.org/ and you will see many projects.  Choose one that looks interesting.
+
+If you visit the official Hour Of Code site at https://code.org/learn , you will see recommendations for several great, free sites for learning javascript.  There are a number of very good paid sites as well.
