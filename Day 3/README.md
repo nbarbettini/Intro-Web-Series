@@ -303,7 +303,7 @@ img.centeredImage {
 }
 ```
 
-Next, lets write a bit of javascript and html to add sizing buttons.
+Next, let's write a bit of javascript and html to add sizing buttons.
 
 ```html
 <p>
@@ -342,11 +342,12 @@ You can see an example of this code at https://d157rqmxrxj6ey.cloudfront.net/jam
 
 # Next Steps
 
-We barely scratched the surface of Javascript in this class.
+We barely scratched the surface of Javascript in this class.  You can easily learn more online...
 
-# Khan Academy's Hour of Code with Javascript
+## Khan Academy's Hour of Code with Javascript
 If you run out of ideas tonight and.or just want a quick lesson that takes about an hour, look at Khan Academy's Hour Of Code lesson at https://www.khanacademy.org/computing/hour-of-code
 
+## still more...
 There is a wealth of resources for learning Javascript.  
 Khan Academy's site is truely an awesome way to learn Javascript.  https://www.khanacademy.org/computing/computer-programming/programming
 
