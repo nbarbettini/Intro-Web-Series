@@ -1,17 +1,17 @@
-#Day 3: Beginning with Javascript
+#Day 3: Beginning with JavaScript
 
-You have been amazingly creative with your pages and stories, and today we will learn how to make them interactive with Javascript!
+You have been amazingly creative with your pages and stories, and today we will learn how to make them interactive with JavaScript!
 
-Javascript is the computer language that runs in web browsers (and increasingly, everywhere else).
-Javascript has good parts and bad parts.  The bad parts make it very hard to build large web sites, but some times make it easier to do small things.  
+JavaScript is the computer language that runs in web browsers (and increasingly, everywhere else).
+JavaScript has good parts and bad parts.  The bad parts make it very hard to build large web sites, but some times make it easier to do small things.  
 
-# What Javascript looks like (the syntax)
+### What JavaScript looks like (the syntax)
 
 There's so much to say about syntax that it could take all night, but we know you want to get to the fun stuff, so glance over this and move on.  You will see this syntax used in the examples that follow this section.
 
-Some of the key javascript syntax concepts are 
-- statements end in semicolons, i.e. ```;```
-- usually statements are one-per-line
+Some of the key JavaScript syntax concepts are 
+- statements end in semicolons: ```;```
+- usually, statements are written one-per-line  (unlike HTML)
 - typically, javascript is run in functions, which have names, accept parameters, and "do a function".  You call functions by stating their name and putting ```()``` behind the name, and including any parameters between the parenthesis.
 - you must use ```{``` paired with ```}``` when you have more than one line of code grouped together, and sometimes (like a function's code) it is always in matching ```{``` paired with ```}```
 - javascript has control mechanisms like if..then , loops (see below) , 
@@ -26,7 +26,7 @@ if (something-is-true) {
 
 #Showing alerts and prompts
 
-You can run javascript right on the address bar of your browser.  (Make a new tab, then...) type the following line:
+You can run JavaScript right on the address bar of your browser.  (Make a new tab, then...) type the following line:
 
 ```javascript
 javascript:alert("Hello World");
@@ -39,7 +39,8 @@ Prompts are a lot like alerts, but you can ask a question and save the answer in
 
 Make a new project and change the body to this:
 ```html
-<body>
+<!DOCTYPE html>
+<html><body>
 
   <h1 id="welcome">Welcome to Thimble</h1>
 
@@ -48,22 +49,23 @@ Make a new project and change the body to this:
     var name = prompt("What is your name?");
     alert("Hello "+name);
   </script>
-</body>
+</body></html>
 ```
-You notice that the entered name is shown in an alert box.  
 
-By the way, we put some javascript right on the html page.  We will not do this for long--it belongs in a separate file.  
+By the way, we put some javascript right in the html page.  We will not do this for long--it belongs in a separate file.  
 
-Now add the next line before the final ```</script>``` tag.
+You probably noticed that the name was shown in an alert box.  That gets irritating.  Delete that alert line and replace it with this:
+
+It should be placed right before the final ```</script>``` tag.
 ```javascript
     document.getElementById("welcome").innerHTML = "Welcome to Thimble, "+name;
 ```
-Now, you hopefully saw the name appear at the end of the welcome message.  We used a **function** called `getElementById` to hunt down the welcome message in the web page (also called the **document**) and change it.  Cool, huh.  (Notice that the html had to name the welcome element by ```id="welcome"```.  In earlier weeks we might have given it an id or class to apply a style.
+Now, you hopefully saw the name appear at the end of the welcome message.  We used a **function** called `getElementById` to hunt down the welcome message in the web page (also called the **document**) and change it.  Cool, huh?  (Notice that the html had to name the welcome element by ```id="welcome"```.  In earlier weeks we might have given it an id or class to apply a style.  Later tonight, we'll use this to apply a new style.
 
 
-## Conditionals and Loops
+## Loops, If statements, and tests
 
-Javascript is like most computer languages because it has ways to control the program action.  Two basic control mechanisms are loops and conditionals.  If (conditional_expression) lets you decide if a block of code should be run before running it.  Also, you typically use a conditional_expression to know when to stop the loop.
+JavaScript is like most computer languages because it has ways to control the program action.  Two basic control mechanisms are loops and conditionals.  ```If (conditional_expression)``` lets you test and choose if a block of code should be run before running it.  Similarly, you typically use a conditional_expression to know when to stop the loop.
 
 Let's modify the web page just a bit more to create a place where output can appear.
 Put this line before the `<script>` tag you put in earlier.
@@ -72,16 +74,16 @@ Put this line before the `<script>` tag you put in earlier.
 <p id="output">How happy am I?</p>
 ```
 
-Now, before the final script line, add the following
+Now, after the opening ```<script>``` tag but before the closing ```</script>``` tag, add the following
 ```javascript
 var i=0;
 while (i<10) {
-   document.getElementById("output").innerHTML += ":) ";
+   document.getElementById("output").innerHTML += " :)";
    i += 1;
 }
 ```
 
-We set the value of i first to 0, then added a smiley and incremented i until i was no longer less than 10.
+We set the value of ```i``` first to 0, then added a smiley and incremented ```i``` until it was no longer less than 10.
 So, how many smileys were printed?
 
 Note: += is a math-like operator that says 'add the thing on the right to the existing thing on the left of +='.
@@ -99,9 +101,11 @@ Warning: adding strings to existing strings gets slower the more times it happen
 
 ## Advice: When you don't know what is going wrong...
 This is important advice if what you are doing is not working and you don't know why!
-If something is wrong with your javascript, the Javascript Console may be the only place to see it.  Open up the console log by the developer tools.  On Chrome, on a PC, press Control-Shift-I and on a Mac, press Command-Option-I.  In the top of the area that appears, click on the word "Console".  In this window, you will see output that Javascript produces, either console logs as they are written, or warnings and errors in the page itself.  (On Firefox, use Control-Shift-K or Command-Option-K.  Internet Explorer? F12) 
+If something is wrong with your JavaScript, the JavaScript Console may be the only place to see error messages.  Open up the console log by the developer tools.  On Chrome, on a PC, press Control-Shift-I and on a Mac, press Command-Option-I.  In the top of the area that appears, click on the word "Console".  In this window, you will see output that JavaScript produces, either console logs as they are written, or warnings and errors in the page itself.  (On Firefox, use Control-Shift-K or Command-Option-K.  Internet Explorer? F12) 
 Tip: You can put messages you write in the console log, too.  For instance, after you asked for name, you could also print it in the console.
+```javascript
 console.log("Someone named "+name+ " is visiting the page");
+```
 Of course, you also created the output area, and you can write to that and see it in the browser itself.
 
 
@@ -109,7 +113,7 @@ Note: So, now I'm going to stop doing two bad things.  First, it's time to stop 
 Second, I will stop appending to a string inside a loop.
 
 ## Using a separate JavaScript file
-If you are using Mozilla Thimble, in the upper left corner, click the green + , which is the way to say 'add a new file', then choose Javascript.  (If you hid the file tray by clicking the left-pointing arrow previously, then click the right-pointing arrow to restore it.)  You will see a new file created, probably called script-1.js  
+If you are using Mozilla Thimble, in the upper left corner, click the green + , which is the way to say 'add a new file', then choose JavaScript.  (If you hid the file tray by clicking the left-pointing arrow previously, then click the right-pointing arrow to restore it.)  You will see a new file created, probably called script-1.js  
 The first bunch of writing is called a comment.  It is the way you can leave notes to yourself or others.  At the time this was written, it looks like this:
 
 ```javascript
@@ -125,13 +129,8 @@ To use this file, link it to your markup by placing a <script> in the <body> of 
 
 It's important to get the ```<script...``` tag line and copy it into your html file.  Note that the comment acts like the file is called script.js, so after you copy the line in your html file, make sure you get the name to match, probably by adding '-1' .  (If you prefer, it's prettier to rename the new file's name.)  Also, For now, I recommend that it be the last line before the closing body tag.
 
-```html
-...
-    <script src="script-1.js"></script>
-</body>
-```
 
-Now, you can take the code that asked for a name and copy it into this file.
+Now, you can take the javascript code that asked for a name and copy it into this new .js file.
 ```javascript
 
 function greetMe(name) {
@@ -143,9 +142,15 @@ var name = prompt("What is your name?");
 greetMe(name);
 ```
 
-The code that was put into the file you created uses a *function* to do it's work.
+Then, go back and replace the old script block with this
+```html
+    <script src="script-1.js"></script>
+</body>
+```
+
+The code that was put into the file you created uses a **function** to do it's work.
 You were able to use it just by passing in the name you gathered earlier.
-Function code is only run when some other code calls it, but it is good practice to make sure it has been seen by the browser prior to being called, otherwise the browser will not know what to do when it sees it.  (If you called greetMe before declaring what greetMe should do, you would see an error in the javascript console.
+Function code is only run when some other code calls it, but it is good practice to make sure it has been seen by the browser prior to being called, otherwise the browser will not know what to do when it sees it.  (If you called greetMe before declaring what greetMe should do, you would see an error in the javascript console.)
 
 # Your Project
 
@@ -171,7 +176,7 @@ Then add the button and its callback function to the HTML
 ```html
 <button id="myButton" type="button" onClick="clearOutput();return false;">Clear It!</button>
 ```
-Expert Tip: the ```return false;``` prevents information being sent to the web server.
+Expert Tip: the ```return false;``` prevents the page from going away and a request being sent to the web server.
 
 ## Buttons to make images bigger or smaller.
 
@@ -179,7 +184,7 @@ Buttons are also frequently used to do things with images, like make slide shows
 
 Last week, I added this image to the presentation
 Logo: 
-![alt text](https://raw.githubusercontent.com/CoderDojoSV/Intro-Web-Series/master/Day%202/HTML5_and_CSS3_badges.svg "logo")
+![alt text](https://rawgithub.com/CoderDojoSV/Intro-Web-Series/master/Day%202/HTML5_and_CSS3_badges.svg "logo")
 
 Let's tweak the HTML to give images a slightly better class name.
 
@@ -235,7 +240,7 @@ alert("Now I know of "+colors.length+" colors")
 
 ## Introducing Math.random()
 
-Javascript has many math functions that can work with numbers.  (Numbers can be integers or floating point numbers and unlike nearly all other computer languages, you don't have to treat them differently.)
+JavaScript has many math functions that can work with numbers.  (Numbers can be integers or floating point numbers and unlike nearly all other computer languages, you don't have to treat them differently.)
 
 If you are wanting to do something fun to a web page, adding randomness by the ```Math.random``` function.
 Calling Math.random returns a random number between 0 and 1.  You need to multiply it by the array length, and then turn it into an integer in order to use it to get a value from an array.  Math.floor takes a floating point number and drops the fraction portion (For example, Math.floor(1.99) returns 1.
@@ -251,7 +256,7 @@ document.getElementById("welcome").color = colors[colorIndex];
 
 ## Introducing setInterval
 
-One of the fun things you can do is to make something happen automatically.  Javascript's ```setInterval()``` is a way to make something happen over time.  It's use is tricky, and it is very easy to bog down a computer to the point where it is unusably slow (at least until the web page is closed) but can do some cool effects if used well.
+One of the fun things you can do is to make something happen automatically.  JavaScript's ```setInterval()``` is a way to make something happen over time.  It's use is tricky, and it is very easy to bog down a computer to the point where it is unusably slow (at least until the web page is closed) but can do some cool effects if used well.
 
 Try this
 ```javascript
@@ -266,7 +271,7 @@ function cycleColor() {
 var colorCycleIntervalTimer = setInterval(cycleColor,100);
 ```
 
-The other place you would see the name is on the console log.  Open up the console log by the developer tools.  On Chrome, on a PC, press Control-Shift-I and on a Mac, press Command-Option-I.  In the top of the area that appears, clock on the word "Console".  In this window, you will see output that Javascript produces, either console logs as they are written, or warnings and errors in the page itself.
+The other place you would see the name is on the console log.  Open up the console log by the developer tools.  On Chrome, on a PC, press Control-Shift-I and on a Mac, press Command-Option-I.  In the top of the area that appears, clock on the word "Console".  In this window, you will see output that JavaScript produces, either console logs as they are written, or warnings and errors in the page itself.
 
 # bigger examples
 ?magic 8 ball?  
