@@ -178,13 +178,13 @@ Remember, you need to include your javascript file in the html.
 ```
 
 ## Create an array of colors
-An important type of variable is the Array.  An array is a list of things, and yu can get to the members one-by-one.  This is an array strings.  
+An important type of variable is the Array.  An array is a list of things, and you can get to the items one-by-one.  This is an example array of strings that happen to be color names:  
 
 ```javascript
 var colors = ['red', 'green', 'blue', 'orange', 'yellow'];
 ```
 
-You can learn the length of an array by the .length property.  (It's a property, not a function, so you do not use ())
+You can learn the length of an array by the .length property.  (It's a property, not a function, so you do not use ```()``` to get the value.)
 
 You can try this if you want to see it in action
 
@@ -262,7 +262,7 @@ You can see this in action at https://d157rqmxrxj6ey.cloudfront.net/jamwave/1816
 
 *Seriously, if you are getting tired of reading, skip to the end and start Khan Academy's Hour of Code on Javascript.*
 
-## Want more? Make a button
+## (Optional) Make a button
 
 Buttons are actually created with HTML.  The oldest use of a button is for telling a web page's form that you are done filling it in and that the input should be sent to a web server.  That's not the only use for a button,  but it's the default use, so code has to be written if you don't want information to be sent to a web server and new page to be displayed.  In particular, you can run javascript when a button is pressed, and the button can do something to the web page you are looking at.
 
