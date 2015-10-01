@@ -10,5 +10,5 @@ All websites are a combination of code in 3 languages: HTML, CSS, and JavaScript
 
 [:rocket: Day 2 - More HTML and CSS - Let's Make a Maze!](Day 2/)
 
-[:rocket: Day 3 - A quick intro to Javascript - Add cool effects to your site](Day 3/)
+[:rocket: Day 3 - A quick intro to JavaScript - Add cool effects to your site](Day 3/)
 
