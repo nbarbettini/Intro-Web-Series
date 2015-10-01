@@ -2,20 +2,20 @@
 
 You have been amazingly creative with your pages and stories, and today we will learn how to make them even more interactive with JavaScript!
 
-Covering Javascirpt in one night is ambitious.  The goal is to get to the point where you understand what happens on this page:  https://d157rqmxrxj6ey.cloudfront.net/jamwave/18168  There's *a lot* of information here, so if you feel fatigued, feel free to jump to the end and explore Khan Academy's hour of code for Javascript.  It is really good and isn't just on one long page.
+Covering JavaScript in one night is ambitious.  The goal is to get to the point where you understand what happens on this page:  https://d157rqmxrxj6ey.cloudfront.net/jamwave/18168  There's *a lot* of information here, so if you feel fatigued, feel free to jump to the end and explore Khan Academy's Hour of Code for JavaScript.  It is really good and isn't just on one long page.
 
 Tonight, we'll go over
-- Introducing Javascript: 
+- Introducing JavaScript: 
   * What JavaScript looks like (very quickly)
   * Simple alerts, prompts, and variables
   * Simple if..then..else control
   * a bit of debugging advice
-  * Putting javascript in a different file
-- Then for your project
+  * Putting JavaScript in a different file
+- Then for *your* project
   * How to define a list of colors
   * Use a function to change color of the text. 
   * (optional) How to make a button and make it do something
-- We'll wrap up with suggestions on where you can learn more
+- We'll wrap up with suggestions on where you can learn more on your own
  
  
 JavaScript is the computer language that runs in web browsers (and increasingly, everywhere else).
@@ -38,7 +38,7 @@ if (something-is-true) {
   doThat();
 }
 ```
-- when you are writing code inside a control structure, be sure to indent it at least 2 spaces more thn the lines above, and make a habit of using curly braces around blocks of code.  
+- when you are writing code inside a control structure, be sure to indent it at least 2 spaces more than the lines above, and make a habit of using curly braces around blocks of code.  
 
 #Showing alerts and prompts
 
@@ -123,7 +123,7 @@ console.log("Someone named "+name+ " is visiting the page");
 Of course, you also created the output area, and you can write to that and see it in the browser itself.
 
 
-Note: So, now I'm going to stop doing two bad things.  First, it's time to stop putting javascript in the html page!
+Note: So, now I'm going to stop doing two bad things.  First, it's time to stop putting JavaScript in the HTML page!
 Second, I will stop appending to a string inside a loop.
 
 ## Using a separate JavaScript file
@@ -170,8 +170,8 @@ The examples so far are visible at https://d157rqmxrxj6ey.cloudfront.net/jamwave
 # Your Project
 
 We have been excited to see how you have built projects based on your interests, and we want to encourage you to continue doing that.
-So, we want to give you a few javascript tricks that can make your page even more interactive (or more automated).
-Remember, you need to include your javascript file in the html.
+So, we want to give you a few JavaScript tricks that can make your page even more interactive (or more automated).
+Remember, you need to include your JavaScript file in the HTML.
 ```html...
     <script src="script-1.js"></script>
 <body>
@@ -260,7 +260,7 @@ var colorCycleIntervalTimer = setInterval(cycleColor,100);
 
 You can see this in action at https://d157rqmxrxj6ey.cloudfront.net/jamwave/18168
 
-*Seriously, if you are getting tired of reading, skip to the end and start Khan Academy's Hour of Code on Javascript.*
+*If you are getting tired of reading this page, skip to the end and try Khan Academy's Hour of Code on JavaScript.*
 
 ## (Optional) Make a button
 
@@ -303,7 +303,7 @@ img.centeredImage {
 }
 ```
 
-Next, let's write a bit of javascript and html to add sizing buttons.
+Next, let's write a bit of JavaScript and HTML to add sizing buttons.
 
 ```html
 <p>
@@ -342,14 +342,14 @@ You can see an example of this code at https://d157rqmxrxj6ey.cloudfront.net/jam
 
 # Next Steps
 
-We barely scratched the surface of Javascript in this class.  You can easily learn more online...
+We barely scratched the surface of JavaScript in this class.  You can easily learn more online...
 
-## Khan Academy's Hour of Code with Javascript
+## Khan Academy's Hour of Code with JavaScript
 If you run out of ideas tonight and.or just want a quick lesson that takes about an hour, look at Khan Academy's Hour Of Code lesson at https://www.khanacademy.org/computing/hour-of-code
 
 ## still more...
-There is a wealth of resources for learning Javascript.  
-Khan Academy's site is truely an awesome way to learn Javascript.  https://www.khanacademy.org/computing/computer-programming/programming
+There is a wealth of resources for learning JavaScript.  
+Khan Academy's site is truely an awesome way to learn JavaScript.  https://www.khanacademy.org/computing/computer-programming/programming
 
 The reason we chose Thimble for this class is that it is structured for learners.  Scroll on down at https://thimble.mozilla.org/ and you will see many projects.  Choose one that looks interesting.
 
