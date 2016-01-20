@@ -61,9 +61,12 @@ Make a new project and change the body to this:
   <h1 id="welcome">Welcome to Thimble</h1>
 
   <p>Make something <strong>amazing</strong> with the web!</p>
+  <input type="button" onClick="askForName()">Hello</input>
   <script>
+   function askForName() {
     var name = prompt("What is your name?");
     alert("Hello "+name);
+   }
   </script>
 </body></html>
 ```
